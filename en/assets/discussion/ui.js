@@ -1,0 +1,1104 @@
+(() => {
+  'use strict';
+  const runtime = window.__ktDiscussionRuntime;
+  const context = runtime?.getContext();
+  const mount = document.getElementById('kt-public-discussion');
+  if (!mount || !context?.pageKey || runtime.mode !== 'production' || !runtime.transport) return;
+
+  const words = context.locale === 'en' ? {
+    title: 'Discussion', explainer: 'Join the discussion about this page.',
+    empty: 'No comments yet.',
+    locked: 'This discussion is locked. Existing comments remain available.', guest: 'Guest',
+    maintainer: 'Maintainer', pinned: 'Pinned', hidden: 'This comment was hidden by the maintainer.',
+    deleted: 'This comment was deleted.', fragment: 'Referenced section',
+    loadMore: 'Load more', loading: 'Loading discussion…', error: 'Couldn’t load the discussion.',
+    retry: 'Try again', count: number => `${number} ${number === 1 ? 'comment' : 'comments'}`,
+    replyTo: name => `Reply to ${name}`, replyHidden: 'Reply to a hidden comment', replyDeleted: 'Reply to a deleted comment', replyUnavailable: 'Reply to an unavailable comment', targetUnavailable: 'This reply target is unavailable. Your draft is kept; choose another published comment to reply to.',
+    replies: 'Replies', all: 'View all discussions', missing: 'This comment is unavailable.',
+    add: 'Add a comment', reply: 'Reply', report: 'Report', name: 'Name (optional)', body: 'Comment',
+    identity: 'No account required. Names are not verified.', rootSubmit: 'Post comment',
+    replySubmit: 'Post reply', cancel: 'Cancel', posting: 'Posting…',
+    rootSuccess: 'Comment posted.', replySuccess: 'Reply posted.',
+    emptyBody: 'Enter a comment.', nameLong: 'Name must be 40 characters or fewer.',
+    bodyLong: 'Comment must be 2,000 characters or fewer.',
+    badHash: 'This section link is too long.', badName: 'Choose another name.',
+    verifyWait: 'Complete verification before posting.',
+    verifyLoad: 'Verification couldn’t load. Please try again.',
+    verifyFailed: 'Verification failed. Please try again.',
+    rateLimited: 'You’re posting too quickly. Please wait and try again.',
+    postFailed: 'Couldn’t post your comment. Your draft is still here — please try again.',
+    postUnknown: 'Posting may have succeeded. Your draft is kept. Refresh and check the discussion before submitting again.',
+    checkedNotPosted: 'I checked; it was not posted', refresh: 'Refresh', refreshed: 'Discussion refreshed.',
+    manualRefreshFailed: 'Couldn’t refresh. Existing comments are kept; please try again.',
+    postLocked: 'This discussion is locked. Your draft is still here.',
+    refreshFailed: 'Your comment was posted, but the discussion couldn’t refresh. Reload the page to see it.',
+    verifyRetry: 'Try verification again',
+    subscriptionOptIn: 'Email me when someone directly replies to this comment (optional)', subscriptionEmail: 'Email for reply notifications',
+    subscriptionPrivacy: 'Your email is private. Verify within 24 hours; subscriptions last 365 days after verification. The email cannot be changed; unsubscribe anytime from an email.',
+    subscriptionSending: 'Comment posted. Requesting email verification…', subscriptionRequest: 'Request email verification',
+    subscriptionRetry: 'Retry subscription only', subscriptionCheck: 'Check subscription status',
+    subscriptionInvalid: 'Comment posted. Enter a valid email below to request verification; do not repost the comment.',
+    subscriptionUnavailable: 'Comment posted. Email subscription is unavailable; you can retry the subscription separately.',
+    subscriptionRate: 'Comment posted. Subscription requests are too frequent; wait before retrying.',
+    subscriptionFixed: 'Comment posted. The first email is fixed; check this subscription’s status.',
+    subscriptionProofMissing: 'Comment posted. Email subscription could not be prepared in this browser.',
+    subscriptionChecking: 'Comment posted. Checking private subscription status…',
+    subscriptionStates: {
+      not_requested: 'Comment posted. Email verification has not been requested.',
+      verification_pending: 'Comment posted. The email provider accepted the verification request; delivery is not confirmed. Notifications start only after you verify.',
+      verification_failed: 'Comment posted. The verification request failed. You can retry only the subscription.',
+      verification_unknown: 'Comment posted. The verification result is uncertain. Check subscription status before deciding whether to retry; do not repost.',
+      active: 'Comment posted. Email verified; notifications for direct replies are active.',
+      cancelled: 'Comment posted. This subscription was cancelled.', expired: 'Comment posted. This subscription expired.',
+    },
+    reactions: 'Emoji reactions', reactionNames: { like: 'Helpful', heart: 'Thanks', smile: 'Happy', celebrate: 'Celebrate', thinking: 'Thinking', sad: 'Sad / Sympathy' },
+    reactionAdd: 'Add a reaction', reactionChoose: 'Choose an emoji', reactionSaving: 'Saving reaction…',
+    reactionRate: 'Too many reaction changes. Please wait and try again.',
+    reactionUnknown: 'Reaction state is uncertain. Reload reactions before making another change.',
+    reactionReadFailed: 'Couldn’t load reactions. Comments remain available.', reactionReadRetry: 'Reload reactions',
+    reactionStorage: 'Reactions require browser storage. Counts remain available.', reactionUnavailable: 'Reactions are unavailable for this comment.',
+  } : {
+    title: '讨论', explainer: '聊聊这页的内容。',
+    empty: '还没有评论。',
+    locked: '此讨论已锁定；现有评论仍可查看。', guest: '访客',
+    maintainer: '维护者', pinned: '置顶', hidden: '此评论已由维护者隐藏。',
+    deleted: '此评论已删除。', fragment: '对应段落',
+    loadMore: '加载更多', loading: '正在加载讨论…', error: '无法加载讨论。',
+    retry: '重试', count: number => `${number} 条评论`, replyTo: name => `回复 ${name}`, replyHidden: '回复已隐藏的评论', replyDeleted: '回复已删除的评论', replyUnavailable: '回复当前不可用的评论', targetUnavailable: '回复对象当前不可用。草稿仍保留；请另选可回复的已发布评论。', replies: '回复', all: '查看全站讨论', missing: '此评论当前不可用。',
+    add: '发表评论', reply: '回复', report: '举报', name: '昵称（可选）', body: '评论',
+    identity: '无需账号；昵称不会验证身份。', rootSubmit: '发表评论',
+    replySubmit: '发布回复', cancel: '取消', posting: '正在发布…',
+    rootSuccess: '评论已发布。', replySuccess: '回复已发布。',
+    emptyBody: '请输入评论内容。', nameLong: '昵称不能超过 40 个字符。',
+    bodyLong: '评论不能超过 2,000 个字符。',
+    badHash: '对应段落链接过长。', badName: '请使用其他昵称。',
+    verifyWait: '请先完成验证，再发布评论。',
+    verifyLoad: '验证组件无法加载，请重试。',
+    verifyFailed: '验证失败，请重试。',
+    rateLimited: '提交过于频繁，请稍后再试。',
+    postFailed: '评论未能发布。草稿仍然保留，请重试。',
+    postUnknown: '发布结果不确定，评论可能已发布。草稿仍保留，请先刷新核对讨论，再决定是否重新提交。',
+    checkedNotPosted: '已核对，确认未发布', refresh: '刷新', refreshed: '讨论已刷新。',
+    manualRefreshFailed: '刷新失败，现有评论仍保留，请重试。',
+    postLocked: '此讨论已锁定；你的草稿仍然保留。',
+    refreshFailed: '评论已发布，但讨论区未能刷新。重新加载页面即可查看。',
+    verifyRetry: '重试验证',
+    subscriptionOptIn: '有人直接回复此评论时邮件提醒我（可选）', subscriptionEmail: '回复提醒邮箱',
+    subscriptionPrivacy: '邮箱不公开。24小时内验证，验证后有效365天；邮箱不能更换，可随时从邮件退订。',
+    subscriptionSending: '评论已发布。正在请求邮箱验证…', subscriptionRequest: '请求邮箱验证',
+    subscriptionRetry: '仅重试订阅', subscriptionCheck: '核对订阅状态',
+    subscriptionInvalid: '评论已发布。请在下方填写有效邮箱后请求验证，无需重发评论。',
+    subscriptionUnavailable: '评论已发布。邮件订阅暂不可用，可单独重试订阅。',
+    subscriptionRate: '评论已发布。订阅请求过于频繁，请稍后再试。',
+    subscriptionFixed: '评论已发布。首次邮箱已固定，请核对此订阅状态。',
+    subscriptionProofMissing: '评论已发布。此浏览器未能准备邮件订阅。',
+    subscriptionChecking: '评论已发布。正在核对私有订阅状态…',
+    subscriptionStates: {
+      not_requested: '评论已发布。尚未请求邮箱验证。',
+      verification_pending: '评论已发布。邮件服务已接受验证请求，但不代表已送达；完成邮箱验证后才会开始提醒。',
+      verification_failed: '评论已发布。验证请求失败，可仅重试订阅。',
+      verification_unknown: '评论已发布。验证结果暂不确定，请先核对订阅状态，再决定是否重试；无需重发评论。',
+      active: '评论已发布。邮箱已验证，直接回复提醒已启用。',
+      cancelled: '评论已发布。此订阅已取消。', expired: '评论已发布。此订阅已过期。',
+    },
+    reactions: 'Emoji 反应', reactionNames: { like: '有帮助', heart: '感谢', smile: '开心', celebrate: '庆祝', thinking: '疑惑', sad: '难过、共情' },
+    reactionAdd: '添加反应', reactionChoose: '选择表情', reactionSaving: '正在保存反应…',
+    reactionRate: '反应操作过于频繁，请稍后重试。',
+    reactionUnknown: '反应状态暂不确定。请先重新读取反应，再进行修改。',
+    reactionReadFailed: '无法读取反应；现有评论仍可查看。', reactionReadRetry: '重新读取反应',
+    reactionStorage: '反应需要浏览器本地存储；仍可查看数量。', reactionUnavailable: '此评论当前不能修改反应。',
+  };
+  const dateFormat = new Intl.DateTimeFormat(context.locale, {
+    year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
+  });
+  const make = (tag, className, value) => {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (value !== undefined) element.textContent = value;
+    return element;
+  };
+
+  const section = make('section', 'kt-discussion');
+  section.setAttribute('aria-labelledby', 'kt-discussion-title');
+  const heading = make('h2', '', words.title);
+  heading.id = 'kt-discussion-title';
+  const headingRow = make('div', 'kt-discussion-heading');
+  const refreshButton = make('button', 'kt-discussion-action kt-discussion-refresh', words.refresh);
+  refreshButton.type = 'button';
+  headingRow.append(heading, refreshButton);
+  const explainer = make('p', 'kt-discussion-explainer', words.explainer);
+  const status = make('div', 'kt-discussion-status');
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+  const postNotice = make('div', 'kt-discussion-post-notice');
+  postNotice.setAttribute('role', 'status');
+  postNotice.setAttribute('aria-live', 'polite');
+  postNotice.tabIndex = -1;
+  const lockedNotice = make('p', 'kt-discussion-locked', words.locked);
+  lockedNotice.hidden = true;
+  const rootAction = make('button', 'kt-discussion-action kt-discussion-add', words.add);
+  rootAction.type = 'button'; rootAction.hidden = true;
+  const composerHost = make('div', 'kt-discussion-composer-host');
+  composerHost.hidden = true;
+  const comments = make('div', 'kt-discussion-comments');
+  const more = make('button', 'kt-discussion-action', words.loadMore);
+  more.type = 'button'; more.hidden = true;
+  section.append(headingRow, explainer, status, postNotice, lockedNotice,
+    rootAction, composerHost, comments, more);
+  mount.append(section);
+  mount.hidden = false;
+
+  const writeEnabled = typeof runtime.transport.postComment === 'function';
+  const reportEnabled = false;
+  const subscriptionEnabled = false;
+  const state = { activeVersion: context.guideVersion, pages: new Map(), pending: false,
+    uncertainTargets: new Set(), drafts: new Map(), activeTarget: null, activeReply: null, opener: null, posting: false, threadLocked: false };
+  // Reactions are an independent, optional transport capability. No comment state is reused.
+  const reactionProtocol = runtime.transport.reactionVersion === 2 ? { reactionVersion: 2 } : {};
+  const reactionTypes = ['like', 'heart', 'smile', 'celebrate', 'thinking', ...(reactionProtocol.reactionVersion === 2 ? ['sad'] : [])];
+  const reactionEmoji = { like: '👍', heart: '❤️', smile: '😄', celebrate: '🎉', thinking: '🤔', sad: '😢' };
+  const reactionEnabled = typeof runtime.transport.readReactions === 'function';
+  const reactionWriteEnabled = reactionEnabled && typeof runtime.transport.setReaction === 'function';
+  const reactionVisitorKey = 'carambi:etheria:emoji-visitor:v1';
+  const reactionStates = new Map();
+  let reactionViewGeneration = 0, reactionIdentityGeneration = 0, reactionReadScheduled = false;
+  let reactionMenuId = null;
+  function getReactionVisitor() {
+    try {
+      const stored = localStorage.getItem(reactionVisitorKey);
+      if (typeof stored === 'string' && /^[0-9a-f]{64}$/.test(stored)) return stored;
+      const bytes = crypto.getRandomValues(new Uint8Array(32));
+      const value = Array.from(bytes, byte => byte.toString(16).padStart(2, '0')).join('');
+      localStorage.setItem(reactionVisitorKey, value);
+      return localStorage.getItem(reactionVisitorKey) === value ? value : null;
+    } catch { return null; }
+  }
+  let reactionVisitor = reactionEnabled ? getReactionVisitor() : null;
+  function syncReactionIdentity() {
+    if (!reactionEnabled) return;
+    const visitor = getReactionVisitor();
+    if (visitor === reactionVisitor) return;
+    reactionVisitor = visitor; reactionIdentityGeneration++;
+    for (const [id, item] of reactionStates) {
+      if (item.data) item.data = { ...item.data, selected: [] };
+      item.dataView = -1; item.uncertain = true; paintReaction(id);
+    }
+    closeReactionMenu(); scheduleReactionRead();
+  }
+  const exactReactionKeys = (value, keys) => value && typeof value === 'object' && !Array.isArray(value) &&
+    Object.keys(value).length === keys.length && keys.every(key => Object.hasOwn(value, key));
+  function validReaction(row, id) {
+    return exactReactionKeys(row, ['commentId', 'counts', 'selected', 'canReact']) && row.commentId === id &&
+      exactReactionKeys(row.counts, reactionTypes) && reactionTypes.every(type => Number.isSafeInteger(row.counts[type]) && row.counts[type] >= 0) &&
+      Array.isArray(row.selected) && new Set(row.selected).size === row.selected.length &&
+      row.selected.every(type => reactionTypes.includes(type) && row.counts[type] > 0) && typeof row.canReact === 'boolean';
+  }
+  function reactionState(id) {
+    if (!reactionStates.has(id)) reactionStates.set(id, {
+      data: null, dataView: -1, revision: 0, readSerial: 0, pending: false, uncertain: false, error: '',
+    });
+    return reactionStates.get(id);
+  }
+  function reactionPanel(id) {
+    return [...section.querySelectorAll('.kt-discussion-reactions')].find(panel => panel.dataset.commentId === id);
+  }
+  function positionReactionMenu() {
+    const panel = reactionPanel(reactionMenuId);
+    const menu = panel?.querySelector('.kt-discussion-reaction-menu');
+    const add = panel?.querySelector('.kt-discussion-reaction-add');
+    if (!menu || !add) return;
+    const viewport = window.visualViewport;
+    const gap = 6, edge = 8, leftEdge = (viewport?.offsetLeft ?? 0) + edge, topEdge = (viewport?.offsetTop ?? 0) + edge;
+    const width = viewport?.width ?? innerWidth, height = viewport?.height ?? innerHeight;
+    const rightEdge = leftEdge + width - edge * 2, bottomEdge = topEdge + height - edge * 2;
+    menu.style.maxWidth = `${Math.max(0, width - edge * 2)}px`;
+    menu.style.maxHeight = `${Math.max(0, height - edge * 2)}px`;
+    const anchor = add.getBoundingClientRect(), size = menu.getBoundingClientRect();
+    const left = Math.max(leftEdge, Math.min(anchor.left, rightEdge - size.width));
+    const toolbar = panel.closest('.kt-discussion-actions')?.getBoundingClientRect() ?? anchor;
+    const below = Math.max(anchor.bottom, toolbar.bottom) + gap;
+    const above = Math.min(anchor.top, toolbar.top) - gap - size.height;
+    const preferredTop = below + size.height > bottomEdge && above >= topEdge ? above : below;
+    const top = Math.max(topEdge, Math.min(preferredTop, bottomEdge - size.height));
+    menu.style.left = `${left}px`; menu.style.top = `${top}px`;
+  }
+  function closeReactionMenu(restoreFocus = false) {
+    const id = reactionMenuId;
+    reactionMenuId = null;
+    if (id) {
+      paintReaction(id);
+      if (restoreFocus) reactionPanel(id)?.querySelector('.kt-discussion-reaction-add')?.focus({ preventScroll: true });
+    }
+  }
+  function paintReaction(id) {
+    const panel = reactionPanel(id);
+    if (!panel) return;
+    const item = reactionState(id), data = item.data;
+    const enabled = reactionWriteEnabled && !!reactionVisitor && data?.canReact === true &&
+      item.dataView === reactionViewGeneration && !item.pending && !item.uncertain;
+    const focused = panel.contains(document.activeElement) ? document.activeElement : null;
+    const focusType = focused?.dataset.reactionType ?? (focused ? item.focusType : null);
+    const focusMenu = !!focused?.closest('.kt-discussion-reaction-menu');
+    const focusedRetry = focused?.classList.contains('kt-discussion-reaction-retry');
+    const x = scrollX, y = scrollY;
+    // A local notice can change the height above an editor the user is typing in.
+    const editor = document.activeElement?.closest('.kt-discussion-composer') ? document.activeElement : null;
+    const editorTop = editor?.getBoundingClientRect().top;
+    panel.replaceChildren();
+    panel.setAttribute('aria-busy', String(item.pending));
+    const chips = make('div', 'kt-discussion-reaction-chips');
+    for (const type of reactionTypes) {
+      if (!data?.counts[type]) continue;
+      const selected = data.selected.includes(type);
+      const button = make('button', 'kt-discussion-reaction-chip', `${reactionEmoji[type]} ${data.counts[type]}${selected ? ' ✓' : ''}`);
+      button.type = 'button'; button.dataset.reactionType = type;
+      button.setAttribute('aria-label', `${words.reactionNames[type]} · ${data.counts[type]}`);
+      button.setAttribute('aria-pressed', String(selected)); button.disabled = !enabled;
+      button.addEventListener('click', () => writeReaction(id, type));
+      chips.append(button);
+    }
+    const add = make('button', 'kt-discussion-reaction-add', '＋');
+    add.type = 'button'; add.setAttribute('aria-label', words.reactionAdd);
+    add.setAttribute('aria-haspopup', 'menu'); add.setAttribute('aria-expanded', String(reactionMenuId === id));
+    add.disabled = !enabled;
+    add.addEventListener('click', () => {
+      if (reactionMenuId === id) { closeReactionMenu(true); return; }
+      closeReactionMenu(); reactionMenuId = id; paintReaction(id);
+      reactionPanel(id)?.querySelector('[role="menuitemcheckbox"]')?.focus({ preventScroll: true });
+    });
+    chips.append(add); panel.append(chips);
+    if (reactionMenuId === id && enabled) {
+      const menu = make('div', 'kt-discussion-reaction-menu'); menu.setAttribute('role', 'menu');
+      menu.setAttribute('aria-label', words.reactionChoose);
+      for (const type of reactionTypes) {
+        const selected = data.selected.includes(type);
+        const button = make('button', 'kt-discussion-reaction-option', `${reactionEmoji[type]}${selected ? ' ✓' : ''}`);
+        button.type = 'button'; button.dataset.reactionType = type;
+        button.setAttribute('role', 'menuitemcheckbox'); button.setAttribute('aria-checked', String(selected));
+        button.setAttribute('aria-label', words.reactionNames[type]);
+        button.addEventListener('click', () => writeReaction(id, type));
+        menu.append(button);
+      }
+      menu.addEventListener('keydown', event => {
+        const options = [...menu.querySelectorAll('button')], index = options.indexOf(document.activeElement);
+        let next;
+        if (['ArrowRight', 'ArrowDown'].includes(event.key)) next = (index + 1) % options.length;
+        if (['ArrowLeft', 'ArrowUp'].includes(event.key)) next = (index - 1 + options.length) % options.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = options.length - 1;
+        if (next !== undefined) { event.preventDefault(); options[next].focus({ preventScroll: true }); }
+      });
+      panel.append(menu);
+    } else if (reactionMenuId === id) reactionMenuId = null;
+    const notice = make('p', 'kt-discussion-reaction-status'); notice.setAttribute('role', 'status');
+    notice.setAttribute('aria-live', 'polite');
+    if (item.pending) notice.textContent = words.reactionSaving;
+    else if (item.error) notice.textContent = item.error;
+    else if (!reactionVisitor) notice.textContent = words.reactionStorage;
+    else if (data?.canReact === false) notice.textContent = words.reactionUnavailable;
+    if (notice.textContent) panel.append(notice);
+    if (item.error && !item.pending) {
+      const retry = make('button', 'kt-discussion-reaction-retry', words.reactionReadRetry); retry.type = 'button';
+      retry.addEventListener('click', () => readReactionIds([id])); panel.append(retry);
+    }
+    if (focused) {
+      const replacement = focusType ? panel.querySelector(`${focusMenu ? '.kt-discussion-reaction-menu ' : '.kt-discussion-reaction-chips '}[data-reaction-type="${focusType}"]`) :
+        focusedRetry ? panel.querySelector('.kt-discussion-reaction-retry') : panel.querySelector('.kt-discussion-reaction-add');
+      const fallback = panel.querySelector('.kt-discussion-reaction-add');
+      const focusable = replacement && !replacement.disabled ? replacement : fallback && !fallback.disabled ? fallback : null;
+      if (focusable) focusable.focus({ preventScroll: true });
+      else panel.focus({ preventScroll: true });
+    }
+    const nextY = editor?.isConnected ? scrollY + editor.getBoundingClientRect().top - editorTop : y;
+    scrollTo(x, nextY);
+    positionReactionMenu();
+  }
+  function makeReactionPanel(id) {
+    const panel = make('div', 'kt-discussion-reactions'); panel.dataset.commentId = id; panel.tabIndex = -1;
+    panel.setAttribute('role', 'group'); panel.setAttribute('aria-label', words.reactions);
+    return panel;
+  }
+  async function readReactionIds(ids) {
+    if (!reactionEnabled || !ids.length) return;
+    const view = reactionViewGeneration, identity = reactionIdentityGeneration;
+    const captures = new Map(ids.map(id => {
+      const entry = reactionState(id);
+      return [id, { revision: entry.revision, serial: ++entry.readSerial }];
+    }));
+    const current = id => {
+      const item = reactionState(id), capture = captures.get(id);
+      return view === reactionViewGeneration && identity === reactionIdentityGeneration &&
+        item.revision === capture.revision && item.readSerial === capture.serial && !item.pending;
+    };
+    const input = { ...reactionProtocol, pageKey: context.pageKey, locale: context.locale, commentIds: ids };
+    if (reactionVisitor) input.visitorId = reactionVisitor;
+    try {
+      const response = await runtime.transport.readReactions(input);
+      if (response?.ok !== true || !Array.isArray(response.reactions) || response.reactions.length !== ids.length ||
+          new Set(response.reactions.map(row => row?.commentId)).size !== ids.length ||
+          !response.reactions.every(row => ids.includes(row?.commentId) && validReaction(row, row.commentId))) throw Error('INVALID_REACTION_RESPONSE');
+      for (const data of response.reactions) {
+        if (!current(data.commentId)) continue;
+        const item = reactionState(data.commentId);
+        item.data = { ...data, counts: { ...data.counts }, selected: [...data.selected] }; item.dataView = view; item.error = ''; item.uncertain = false; paintReaction(data.commentId);
+      }
+    } catch {
+      for (const id of ids) if (current(id)) {
+        const item = reactionState(id); item.error = item.uncertain ? words.reactionUnknown : words.reactionReadFailed;
+        paintReaction(id);
+      }
+    }
+  }
+  function scheduleReactionRead() {
+    if (!reactionEnabled || reactionReadScheduled) return;
+    reactionReadScheduled = true;
+    queueMicrotask(async () => {
+      reactionReadScheduled = false;
+      const ids = [...new Set([...section.querySelectorAll('.kt-discussion-reactions')].map(panel => panel.dataset.commentId))];
+      for (let index = 0; index < ids.length; index += 50) await readReactionIds(ids.slice(index, index + 50));
+    });
+  }
+  async function writeReaction(id, type) {
+    syncReactionIdentity();
+    const item = reactionState(id), data = item.data;
+    if (!reactionWriteEnabled || !reactionVisitor || item.pending || item.uncertain || item.dataView !== reactionViewGeneration ||
+        data?.canReact !== true || !reactionTypes.includes(type)) return;
+    const view = reactionViewGeneration, identity = reactionIdentityGeneration;
+    const intent = data.selected.includes(type) ? 'remove' : 'add';
+    // The stable panel temporarily owns focus while its disabled children are rebuilt.
+    // Completion restores the intended chip/add only if the user still focuses this panel.
+    if (reactionPanel(id)?.contains(document.activeElement)) item.focusType = type;
+    item.pending = true; item.revision++; item.error = ''; closeReactionMenu(); paintReaction(id);
+    let needsRead = false;
+    try {
+      const response = await runtime.transport.setReaction({ ...reactionProtocol, pageKey: context.pageKey, locale: context.locale,
+        commentId: id, type, visitorId: reactionVisitor, intent });
+      if (response?.ok !== true || !validReaction(response.reaction, id)) throw Error('INVALID_REACTION_RESPONSE');
+      if (view === reactionViewGeneration && identity === reactionIdentityGeneration) {
+        item.data = { ...response.reaction, counts: { ...response.reaction.counts }, selected: [...response.reaction.selected] }; item.dataView = view; item.uncertain = false;
+      } else { item.uncertain = true; needsRead = true; }
+    } catch (error) {
+      if (error?.status === 429 && view === reactionViewGeneration && identity === reactionIdentityGeneration) {
+        item.error = words.reactionRate;
+      } else {
+        item.uncertain = true; needsRead = true; item.error = words.reactionUnknown;
+      }
+    } finally {
+      item.pending = false; item.revision++; paintReaction(id);
+      if (needsRead) await readReactionIds([id]);
+    }
+  }
+  if (reactionEnabled) {
+    window.addEventListener('resize', positionReactionMenu);
+    window.addEventListener('scroll', positionReactionMenu, { passive: true });
+    window.visualViewport?.addEventListener('resize', positionReactionMenu);
+    window.visualViewport?.addEventListener('scroll', positionReactionMenu, { passive: true });
+    document.addEventListener('click', event => {
+      if (reactionMenuId && !event.composedPath().includes(reactionPanel(reactionMenuId))) closeReactionMenu();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && reactionMenuId) { event.preventDefault(); closeReactionMenu(true); }
+    });
+    window.addEventListener('storage', event => {
+      if (event.key !== reactionVisitorKey && event.key !== null) return;
+      syncReactionIdentity();
+      closeReactionMenu(); scheduleReactionRead();
+    });
+  }
+  const requestFor = (guideVersion, cursor = null, section = 'current') => ({
+    site: context.site, locale: context.locale, pageKey: context.pageKey, guideVersion, cursor, section,
+  });
+  const read = async (guideVersion, cursor, section = 'current') => {
+    const response = await runtime.transport.readDiscussion(requestFor(guideVersion, cursor, section));
+    if (response?.ok !== true || !response.thread || !Array.isArray(response.currentVersion?.comments) ||
+        response.currentVersion.guideVersion !== guideVersion || !Array.isArray(response.earlierVersions)) {
+      throw Error('INVALID_DISCUSSION_RESPONSE');
+    }
+    return response;
+  };
+  function message(kind, retry) {
+    status.replaceChildren();
+    if (!kind) return;
+    status.append(make('span', '', kind === 'loading' ? words.loading : words.error));
+    if (kind === 'error') {
+      const button = make('button', 'kt-discussion-action', words.retry);
+      button.type = 'button';
+      button.addEventListener('click', retry);
+      status.append(button);
+    }
+  }
+  function busy(value) {
+    state.pending = value;
+    refreshButton.disabled = value || state.posting;
+    updateSubmit();
+    comments.setAttribute('aria-busy', String(value));
+    more.disabled = value;
+    rootAction.disabled = value;
+    section.querySelectorAll('.kt-discussion-reply-action').forEach(button => { button.disabled = value; });
+    if (!value) replayLocation();
+  }
+  function dateTime(value) {
+    const time = make('time', 'kt-discussion-time');
+    time.dateTime = value;
+    const date = new Date(value);
+    time.textContent = Number.isNaN(date.getTime()) ? value : dateFormat.format(date);
+    return time;
+  }
+  // Keep raw pages/seen IDs/cursors intact; project only the public display tree.
+  function projectRoots(roots) {
+    return roots.flatMap(root => {
+      // Root pagination returns the complete flat reply list for each tree.
+      // Keep anonymous context only when this tree still has published content.
+      if (root.status !== 'published' && !(root.replies ?? []).some(reply => reply.status === 'published')) return [];
+      const referenced = new Set((root.replies ?? []).filter(reply => reply.status === 'published').map(reply => reply.replyToCommentId).filter(Boolean));
+      const replies = (root.replies ?? []).filter(reply => reply.status !== 'deleted' || referenced.has(reply.id));
+      return [{ ...root, replies }];
+    });
+  }
+  function visibleCount(page) {
+    return projectRoots(page.comments).reduce((count, root) => count + 1 + root.replies.length, 0);
+  }
+  function findReply(id) {
+    const pages = [[state.pages.get(state.activeVersion), 'current']];
+    for (const [page, section] of pages) for (const root of page?.comments ?? []) {
+      const comment = root.id === id ? root : (root.replies ?? []).find(reply => reply.id === id);
+      if (comment) return { comment, root, section };
+    }
+    return null;
+  }
+  function replyAllowed(found) {
+    return !!found && !state.threadLocked && found.root.status === 'published' &&
+      found.root.canReply === true && found.comment.status === 'published' && found.comment.canReply === true;
+  }
+  function replyLabel(comment) {
+    if (comment?.status === 'published') return words.replyTo(comment.displayName || words.guest);
+    if (comment?.status === 'hidden') return words.replyHidden;
+    if (comment?.status === 'deleted') return words.replyDeleted;
+    return words.replyUnavailable;
+  }
+  function replyUrl(id) {
+    const url = new URL(location.href);
+    url.searchParams.delete('discussionVersion'); url.searchParams.delete('discussionScope');
+    url.hash = `etheria-comment-${id}`;
+    return url.href;
+  }
+  function renderComment(comment, isRoot, root = comment) {
+    const article = make('article', isRoot ? 'kt-discussion-comment' : 'kt-discussion-reply');
+    article.dataset.commentId = comment.id;
+    article.id = `etheria-comment-${comment.id}`;
+    article.tabIndex = -1;
+    const published = comment.status === 'published';
+    if (published) {
+      const meta = make('div', 'kt-discussion-meta');
+      meta.append(make('strong', 'kt-discussion-author', comment.displayName || words.guest));
+      if (comment.authorKind === 'maintainer') meta.append(make('span', 'kt-discussion-tag', words.maintainer));
+      if (isRoot && comment.authorKind === 'maintainer' && comment.pinnedAt)
+        meta.append(make('span', 'kt-discussion-tag', words.pinned));
+      meta.append(dateTime(comment.createdAt));
+      article.append(meta);
+      if (!isRoot && comment.replyToCommentId) {
+        const target = comment.replyTo;
+        const knownTarget = ['published', 'hidden', 'deleted'].includes(target?.status);
+        const reference = make(knownTarget ? 'a' : 'span', 'kt-discussion-reply-reference', replyLabel(target));
+        reference.dataset.replyToCommentId = comment.replyToCommentId;
+        if (knownTarget) {
+          reference.href = replyUrl(comment.replyToCommentId, root);
+          reference.addEventListener('click', event => {
+            if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+            event.preventDefault(); history.pushState(null, '', reference.href); followLocation();
+          });
+        }
+        article.append(reference);
+      }
+      article.append(make('p', 'kt-discussion-body', comment.body ?? ''));
+      const actions = make('div', 'kt-discussion-actions');
+      if (reactionEnabled && root.status === 'published') actions.append(makeReactionPanel(comment.id));
+      if (isRoot && typeof comment.pageHash === 'string' && /^#[^?#]{1,255}$/.test(comment.pageHash)) {
+        const anchor = make('a', 'kt-discussion-fragment', words.fragment);
+        // Content anchors belong to the original publication page; their translated IDs can differ.
+        const publicationLocale = ['en', 'zh-CN'].includes(comment.publicationLocale) ? comment.publicationLocale : context.locale;
+        const pagePath = context.pagePath.replace(/^\/en\//, '/');
+        anchor.href = (publicationLocale === 'en' ? '/en' : '') + pagePath + comment.pageHash;
+        actions.append(anchor);
+      }
+      if (writeEnabled && replyAllowed({ comment, root })) {
+        const replyAction = make('button', 'kt-discussion-action kt-discussion-reply-action', words.reply);
+        replyAction.type = 'button'; replyAction.disabled = state.pending;
+        replyAction.addEventListener('click', () => openComposer(`reply:${comment.id}`, replyAction));
+        actions.append(replyAction);
+      }
+      if (reportEnabled) {
+        const reportAction = make('button', 'kt-discussion-action kt-discussion-report-action', words.report);
+        reportAction.type = 'button';
+        reportAction.addEventListener('click', () => window.__ktFeedbackDialog?.openReport(comment.id, reportAction));
+        actions.append(reportAction);
+      }
+      if (actions.childElementCount) article.append(actions);
+    } else {
+      article.append(make('p', 'kt-discussion-tombstone',
+        comment.status === 'hidden' ? words.hidden : words.deleted));
+      article.append(dateTime(comment.createdAt));
+    }
+    if (isRoot && Array.isArray(comment.replies) && comment.replies.length) {
+      const replies = make('div', 'kt-discussion-replies');
+      replies.setAttribute('aria-label', words.replies);
+      comment.replies.forEach(reply => replies.append(renderComment(reply, false, root)));
+      article.append(replies);
+    }
+    return article;
+  }
+  function renderPage() {
+    const page = state.pages.get(state.activeVersion);
+    if (!page) return;
+    reactionViewGeneration++;
+    state.threadLocked = page.status === 'locked';
+    lockedNotice.hidden = page.status !== 'locked';
+    rootAction.hidden = !writeEnabled || state.threadLocked || state.activeVersion !== context.guideVersion;
+    rootAction.disabled = state.pending || state.posting;
+    comments.replaceChildren();
+    const visibleRoots = projectRoots(page.comments);
+    if (visibleRoots.length) visibleRoots.forEach(comment => comments.append(renderComment(comment, true)));
+    else if (!page.nextCursor) comments.append(make('p', 'kt-discussion-empty', words.empty));
+    more.hidden = !page.nextCursor;
+    more.disabled = state.pending;
+    if (state.activeTarget === 'root' && (state.threadLocked || state.activeVersion !== context.guideVersion))
+      closeComposer(false);
+    else placeComposer();
+    section.querySelectorAll('.kt-discussion-reactions').forEach(panel => paintReaction(panel.dataset.commentId));
+    scheduleReactionRead();
+    paintSubscription();
+  }
+
+  const form = make('form', 'kt-discussion-composer');
+  form.noValidate = true;
+  const identity = make('p', 'kt-discussion-identity', words.identity);
+  const composerTarget = make('p', 'kt-discussion-composer-target'); composerTarget.hidden = true;
+  const nameLabel = make('label', '', words.name);
+  nameLabel.htmlFor = 'kt-discussion-name';
+  const nameInput = make('input', 'kt-discussion-input');
+  nameInput.id = 'kt-discussion-name'; nameInput.type = 'text'; nameInput.autocomplete = 'off';
+  const nameError = make('p', 'kt-discussion-field-error');
+  nameError.id = 'kt-discussion-name-error'; nameInput.setAttribute('aria-describedby', nameError.id);
+  const bodyLabel = make('label', '', words.body);
+  bodyLabel.htmlFor = 'kt-discussion-new-body';
+  const bodyInput = make('textarea', 'kt-discussion-input');
+  bodyInput.id = 'kt-discussion-new-body'; bodyInput.rows = 5;
+  const bodyError = make('p', 'kt-discussion-field-error');
+  bodyError.id = 'kt-discussion-body-error'; bodyInput.setAttribute('aria-describedby', bodyError.id);
+  const subscriptionOptions = make('div', 'kt-discussion-subscription-options');
+  subscriptionOptions.hidden = !subscriptionEnabled;
+  const optInLabel = make('label', 'kt-discussion-subscription-optin-label');
+  const optIn = make('input', 'kt-discussion-subscription-optin'); optIn.type = 'checkbox'; optIn.checked = false;
+  optInLabel.append(optIn, make('span', '', words.subscriptionOptIn));
+  const draftEmailWrap = make('div', 'kt-discussion-subscription-email-wrap'); draftEmailWrap.hidden = true;
+  const draftEmailLabel = make('label', '', words.subscriptionEmail); draftEmailLabel.htmlFor = 'kt-discussion-subscription-email';
+  const draftEmail = make('input', 'kt-discussion-input kt-discussion-subscription-email');
+  draftEmail.id = 'kt-discussion-subscription-email'; draftEmail.type = 'email'; draftEmail.autocomplete = 'off'; draftEmail.maxLength = 254;
+  const subscriptionPrivacy = make('p', 'kt-discussion-subscription-note', words.subscriptionPrivacy);
+  draftEmailWrap.append(draftEmailLabel, draftEmail, subscriptionPrivacy); subscriptionOptions.append(optInLabel, draftEmailWrap);
+  const honeypot = make('input', 'kt-discussion-honeypot');
+  honeypot.type = 'text'; honeypot.name = 'website'; honeypot.autocomplete = 'off';
+  honeypot.tabIndex = -1; honeypot.setAttribute('aria-hidden', 'true');
+  const verifySlot = make('div', 'kt-discussion-turnstile');
+  const formStatus = make('p', 'kt-discussion-form-status');
+  formStatus.setAttribute('role', 'status'); formStatus.setAttribute('aria-live', 'polite');
+  const verifyRetry = make('button', 'kt-discussion-action', words.verifyRetry);
+  verifyRetry.type = 'button'; verifyRetry.hidden = true;
+  const actions = make('div', 'kt-discussion-composer-actions');
+  const submit = make('button', 'kt-discussion-action kt-discussion-submit', words.rootSubmit);
+  submit.type = 'submit'; submit.disabled = true;
+  const cancel = make('button', 'kt-discussion-action', words.cancel);
+  cancel.type = 'button';
+  const checkedNotPosted = make('button', 'kt-discussion-action kt-discussion-confirm-unposted', words.checkedNotPosted);
+  checkedNotPosted.type = 'button'; checkedNotPosted.hidden = true;
+  actions.append(submit, checkedNotPosted, cancel);
+  form.append(composerTarget, identity, nameLabel, nameInput, nameError, bodyLabel, bodyInput, bodyError,
+    subscriptionOptions, honeypot, verifySlot, formStatus, verifyRetry, actions);
+  if (writeEnabled) composerHost.append(form);
+
+  const privatePanel = make('section', 'kt-discussion-subscription-panel'); privatePanel.hidden = true;
+  const privateStatus = make('p', 'kt-discussion-subscription-status'); privateStatus.setAttribute('role', 'status'); privateStatus.setAttribute('aria-live', 'polite');
+  const privateEmailWrap = make('div', 'kt-discussion-subscription-private-email');
+  const privateEmailLabel = make('label', '', words.subscriptionEmail); privateEmailLabel.htmlFor = 'kt-discussion-subscription-retry-email';
+  const privateEmail = make('input', 'kt-discussion-input'); privateEmail.type = 'email'; privateEmail.autocomplete = 'off'; privateEmail.maxLength = 254;
+  privateEmail.id = 'kt-discussion-subscription-retry-email'; privateEmailWrap.append(privateEmailLabel, privateEmail);
+  const privateActions = make('div', 'kt-discussion-subscription-actions');
+  const privateRetry = make('button', 'kt-discussion-action kt-discussion-subscription-retry', words.subscriptionRequest); privateRetry.type = 'button';
+  const privateCheck = make('button', 'kt-discussion-action kt-discussion-subscription-check', words.subscriptionCheck); privateCheck.type = 'button';
+  privateActions.append(privateRetry, privateCheck); privatePanel.append(privateStatus, privateEmailWrap, privateActions); postNotice.after(privatePanel);
+  let subscriptionGeneration = 0, subscriptionJob = null;
+  const subscriptionStates = ['not_requested', 'verification_pending', 'verification_failed', 'verification_unknown', 'active', 'cancelled', 'expired'];
+  const subscriptionEmailValid = value => typeof value === 'string' && value.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  function subscriptionProof() {
+    try { const bytes = new Uint8Array(32); crypto.getRandomValues(bytes); return [...bytes].map(byte => byte.toString(16).padStart(2, '0')).join(''); }
+    catch { return null; }
+  }
+  function currentSubscription(job) {
+    const latest = runtime.getContext();
+    return job === subscriptionJob && job.generation === subscriptionGeneration && mount.isConnected &&
+      latest?.pageKey === job.pageKey && latest?.locale === job.locale && state.activeVersion === job.viewVersion;
+  }
+  function paintSubscription() {
+    const editor = document.activeElement?.closest('.kt-discussion-composer') ? document.activeElement : null;
+    const top = editor?.getBoundingClientRect().top, x = scrollX;
+    const job = subscriptionJob; privatePanel.hidden = !job || !currentSubscription(job);
+    if (!privatePanel.hidden) {
+      privateStatus.textContent = job.pending ? (job.checking ? words.subscriptionChecking : words.subscriptionSending) : job.message || words.subscriptionStates[job.state];
+      privateEmailWrap.hidden = job.emailFixed || !job.proof || ['active', 'cancelled', 'expired'].includes(job.state);
+      privateEmail.disabled = job.pending; privateRetry.disabled = privateCheck.disabled = job.pending;
+      privateRetry.hidden = !job.proof || !job.mayRetry || !['not_requested', 'verification_failed'].includes(job.state);
+      privateRetry.textContent = job.emailFixed ? words.subscriptionRetry : words.subscriptionRequest;
+      privateCheck.hidden = !job.proof || ['active', 'cancelled', 'expired'].includes(job.state);
+    }
+    if (editor?.isConnected) scrollTo(x, scrollY + editor.getBoundingClientRect().top - top);
+  }
+  async function subscriptionAction(job, checking = false) {
+    if (!currentSubscription(job) || job.pending || !job.proof || (!checking && (!job.mayRetry || !['not_requested', 'verification_failed'].includes(job.state)))) return;
+    if (!checking && !job.emailFixed) {
+      job.email = privateEmail.value.trim();
+      if (!subscriptionEmailValid(job.email)) { job.message = words.subscriptionInvalid; privateEmail.setAttribute('aria-invalid', 'true'); paintSubscription(); return; }
+      privateEmail.removeAttribute('aria-invalid');
+    }
+    job.pending = true; job.checking = checking; job.message = ''; if (!checking) job.emailFixed = true; paintSubscription();
+    const input = { commentId: job.commentId, pageKey: job.pageKey, locale: job.locale, subscriptionProof: job.proof };
+    if (!checking) input.email = job.email;
+    try {
+      const response = await runtime.transport[checking ? 'readSubscriptionStatus' : 'enrollSubscription'](input);
+      const row = response?.subscription;
+      if (response?.ok !== true || !row || !subscriptionStates.includes(row.state) || typeof row.mayRetry !== 'boolean' ||
+          !Object.keys(row).every(key => ['state', 'mayRetry', 'expiresAt'].includes(key)) ||
+          (row.expiresAt !== undefined && (typeof row.expiresAt !== 'string' || !Number.isFinite(Date.parse(row.expiresAt)) || new Date(row.expiresAt).toISOString() !== row.expiresAt))) throw Error('SUBSCRIPTION_UNKNOWN');
+      job.state = row.state; job.mayRetry = row.mayRetry;
+    } catch (error) {
+      if (error?.code === 'SUBSCRIPTION_EMAIL_INVALID' && !checking) {
+        job.state = 'not_requested'; job.emailFixed = false; job.mayRetry = true; job.message = words.subscriptionInvalid;
+      } else if (['SUBSCRIPTION_UNAVAILABLE', 'SUBSCRIPTION_RATE_LIMITED'].includes(error?.code)) {
+        job.state = 'verification_failed'; job.mayRetry = !checking; job.message = error.code === 'SUBSCRIPTION_RATE_LIMITED' ? words.subscriptionRate : words.subscriptionUnavailable;
+      } else if (error?.code === 'SUBSCRIPTION_EMAIL_FIXED') {
+        job.state = 'verification_unknown'; job.mayRetry = false; job.message = words.subscriptionFixed;
+      } else {
+        job.state = 'verification_unknown'; job.mayRetry = false;
+      }
+    } finally { job.pending = false; if (currentSubscription(job)) paintSubscription(); }
+  }
+  function beginSubscription(snapshot, commentId) {
+    if (!snapshot.optIn || snapshot.generation !== subscriptionGeneration || !subscriptionEnabled) return;
+    const job = { ...snapshot, commentId, emailFixed: false, pending: false, state: 'not_requested', mayRetry: true, message: '' };
+    if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(commentId ?? '') || !job.proof) { job.proof = null; job.message = words.subscriptionProofMissing; job.mayRetry = false; }
+    subscriptionJob = job; privateEmail.value = job.email; privateEmail.removeAttribute('aria-invalid'); paintSubscription();
+    if (job.proof && subscriptionEmailValid(job.email)) void subscriptionAction(job);
+    else if (job.proof) { job.message = words.subscriptionInvalid; paintSubscription(); }
+  }
+  privateRetry.addEventListener('click', () => { if (subscriptionJob) void subscriptionAction(subscriptionJob); });
+  privateCheck.addEventListener('click', () => { if (subscriptionJob) void subscriptionAction(subscriptionJob, true); });
+
+  let turnstileScript = null;
+  let widgetId = null;
+  let token = null;
+  let widgetGeneration = 0;
+  const points = value => Array.from(value).length;
+  function saveDraft() {
+    if (state.activeTarget) state.drafts.set(state.activeTarget,
+      { name: nameInput.value, body: bodyInput.value, optIn: subscriptionEnabled && optIn.checked, email: draftEmail.value });
+  }
+  function fieldError(input, messageNode, messageText) {
+    messageNode.textContent = messageText || '';
+    if (messageText) input.setAttribute('aria-invalid', 'true');
+    else input.removeAttribute('aria-invalid');
+  }
+  function clearFieldErrors() {
+    fieldError(nameInput, nameError, '');
+    fieldError(bodyInput, bodyError, '');
+  }
+  function updateSubmit() {
+    const uncertain = state.uncertainTargets.has(state.activeTarget);
+    submit.disabled = state.posting || state.pending || uncertain || !token || !state.activeTarget ||
+      (state.activeTarget.startsWith('reply:') && !replyAllowed(findReply(state.activeTarget.slice(6))));
+    checkedNotPosted.hidden = !uncertain;
+    checkedNotPosted.disabled = state.posting || state.pending ||
+      (state.activeTarget?.startsWith('reply:') && !replyAllowed(findReply(state.activeTarget.slice(6))));
+  }
+  function clearWidget() {
+    widgetGeneration++;
+    token = null;
+    if (widgetId !== null && window.turnstile) {
+      try { window.turnstile.remove(widgetId); } catch { /* A failed widget is already unusable. */ }
+    }
+    widgetId = null;
+    verifySlot.replaceChildren();
+    updateSubmit();
+  }
+  function ensureTurnstile() {
+    if (window.turnstile) return Promise.resolve(window.turnstile);
+    if (turnstileScript) return turnstileScript;
+    turnstileScript = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      const timeout = setTimeout(() => { script.remove(); reject(Error('TURNSTILE_UNAVAILABLE')); }, 10_000);
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.async = true;
+      script.onload = () => {
+        clearTimeout(timeout);
+        if (window.turnstile) resolve(window.turnstile);
+        else { script.remove(); reject(Error('TURNSTILE_UNAVAILABLE')); }
+      };
+      script.onerror = () => { clearTimeout(timeout); script.remove(); reject(Error('TURNSTILE_UNAVAILABLE')); };
+      document.head.append(script);
+    }).catch(error => { turnstileScript = null; throw error; });
+    return turnstileScript;
+  }
+  async function renderChallenge(messageText = words.verifyWait) {
+    clearWidget();
+    if (!state.activeTarget || !writeEnabled) return;
+    if (state.activeTarget.startsWith('reply:') && !replyAllowed(findReply(state.activeTarget.slice(6)))) {
+      formStatus.textContent = state.threadLocked ? words.postLocked : words.targetUnavailable; verifyRetry.hidden = true; return;
+    }
+    const generation = widgetGeneration;
+    formStatus.textContent = messageText;
+    verifyRetry.hidden = true;
+    try {
+      const turnstile = await ensureTurnstile();
+      if (generation !== widgetGeneration || !state.activeTarget) return;
+      const compactTurnstile = verifySlot.getBoundingClientRect().width < 300;
+      widgetId = turnstile.render(verifySlot, {
+        sitekey: runtime.transport.turnstileSitekey, action: 'discussion_post',
+        theme: 'auto', size: compactTurnstile ? 'compact' : 'flexible',
+        'response-field': false,
+        callback(value) {
+          if (generation !== widgetGeneration || state.posting) return;
+          token = value; updateSubmit(); verifyRetry.hidden = true;
+          if (formStatus.textContent === words.verifyWait || formStatus.textContent === words.verifyLoad)
+            formStatus.textContent = '';
+        },
+        'error-callback'() {
+          if (generation !== widgetGeneration) return true;
+          token = null; updateSubmit(); formStatus.textContent = words.verifyLoad;
+          verifyRetry.hidden = false; return true;
+        },
+        'expired-callback'() {
+          if (generation === widgetGeneration) renderChallenge(words.verifyWait);
+        },
+        'timeout-callback'() {
+          if (generation === widgetGeneration) renderChallenge(words.verifyWait);
+        },
+      });
+    } catch {
+      if (generation !== widgetGeneration) return;
+      token = null; updateSubmit(); formStatus.textContent = words.verifyLoad;
+      verifyRetry.hidden = false;
+    }
+  }
+  function closeComposer(restoreFocus = true) {
+    if (!state.activeTarget) return;
+    saveDraft();
+    const opener = state.opener;
+    state.activeTarget = null; state.activeReply = null; state.opener = null;
+    clearWidget();
+    composerHost.hidden = true;
+    comments.before(composerHost);
+    if (restoreFocus && opener?.isConnected && !opener.hidden) opener.focus({ preventScroll: true });
+  }
+  function placeComposer() {
+    if (!state.activeTarget) return;
+    if (state.activeTarget === 'root') {
+      if (rootAction.hidden) { closeComposer(false); return; }
+      rootAction.after(composerHost); composerTarget.hidden = true; delete composerTarget.dataset.replyToCommentId;
+    } else {
+      const targetId = state.activeTarget.slice(6);
+      const found = findReply(targetId);
+      const article = document.getElementById(`etheria-comment-${targetId}`);
+      const action = article?.querySelector(':scope > .kt-discussion-actions > .kt-discussion-reply-action');
+      composerTarget.hidden = false;
+      composerTarget.dataset.replyToCommentId = targetId;
+      const allowed = replyAllowed(found);
+      composerTarget.textContent = found?.comment.status === 'published' && !allowed ? words.replyUnavailable : replyLabel(found?.comment);
+      if (!found && state.activeReply?.section === 'current' && state.activeReply.guideVersion !== state.activeVersion) { closeComposer(false); return; }
+      if (action && allowed) {
+        const wasUnavailable = state.activeReply?.unavailable === true;
+        state.activeReply = { rootId: found.root.id, guideVersion: found.root.guideVersion, section: found.section, unavailable: false };
+        state.opener = action;
+        action.parentElement.after(composerHost);
+        if (wasUnavailable && !state.uncertainTargets.has(state.activeTarget)) renderChallenge();
+      } else {
+        if (state.activeReply) state.activeReply.unavailable = true;
+        comments.before(composerHost);
+        clearWidget(); formStatus.textContent = state.threadLocked ? words.postLocked : words.targetUnavailable; verifyRetry.hidden = true;
+      }
+    }
+    composerHost.hidden = false; updateSubmit();
+  }
+  function openComposer(target, opener) {
+    if (!writeEnabled || state.threadLocked || state.posting || state.pending) return;
+    const found = target.startsWith('reply:') ? findReply(target.slice(6)) : null;
+    if (target.startsWith('reply:') && !replyAllowed(found)) return;
+    if (state.activeTarget === target) { nameInput.focus(); return; }
+    if (state.activeTarget) closeComposer(false);
+    state.activeTarget = target; state.activeReply = found ? { rootId: found.root.id, guideVersion: found.root.guideVersion, section: found.section } : null; state.opener = opener;
+    const draft = state.drafts.get(target);
+    nameInput.value = draft?.name ?? ''; bodyInput.value = draft?.body ?? '';
+    optIn.checked = draft?.optIn === true; draftEmail.value = draft?.email ?? ''; draftEmailWrap.hidden = !optIn.checked;
+    honeypot.value = '';
+    clearFieldErrors(); postNotice.textContent = '';
+    submit.textContent = target === 'root' ? words.rootSubmit : words.replySubmit;
+    placeComposer();
+    nameInput.focus({ preventScroll: true });
+    if (state.uncertainTargets.has(target)) {
+      clearWidget(); formStatus.textContent = words.postUnknown; verifyRetry.hidden = true; updateSubmit();
+    } else renderChallenge();
+  }
+  function validateDraft(target) {
+    clearFieldErrors();
+    const name = nameInput.value.trim();
+    const body = bodyInput.value.trim();
+    let valid = true;
+    if (points(name) > 40) { fieldError(nameInput, nameError, words.nameLong); valid = false; }
+    if (!body) { fieldError(bodyInput, bodyError, words.emptyBody); valid = false; }
+    else if (points(body) > 2000) { fieldError(bodyInput, bodyError, words.bodyLong); valid = false; }
+    const hash = target === 'root' ? runtime.getContentHash() : '';
+    if (target === 'root' && (points(hash) > 256 || (hash && !hash.startsWith('#')))) {
+      formStatus.textContent = words.badHash; valid = false;
+    }
+    if (!valid) (nameInput.hasAttribute('aria-invalid') ? nameInput : bodyInput).focus();
+    return valid;
+  }
+  async function refreshDiscussion() {
+    saveDraft();
+    const selectedVersion = state.activeVersion;
+    const activeReplyId = state.activeTarget?.startsWith('reply:') ? state.activeTarget.slice(6) : null;
+    const activeRootId = activeReplyId ? state.activeReply?.rootId : null;
+    const expected = state.pages.get(selectedVersion)?.comments.length ?? 0;
+    const response = await read(selectedVersion, null);
+    const {comments: roots, nextCursor} = response.currentVersion;
+    const page = {status: response.thread.status, comments: [...roots], seen: new Set(roots.map(root => root.id)), nextCursor};
+    const cursors = new Set();
+    while (page.nextCursor && (page.comments.length < expected || (activeRootId && !page.seen.has(activeRootId)))) {
+      if (cursors.has(page.nextCursor)) throw Error('REPEATED_DISCUSSION_CURSOR');
+      cursors.add(page.nextCursor);
+      const {currentVersion: data} = await read(selectedVersion, page.nextCursor);
+      for (const root of data.comments) if (!page.seen.has(root.id)) { page.comments.push(root); page.seen.add(root.id); }
+      page.nextCursor = data.nextCursor;
+    }
+    state.pages.set(selectedVersion, page);
+    renderPage();
+  }
+  async function manualRefresh() {
+    if (state.pending || state.posting) return;
+    syncReactionIdentity();
+    const focused = document.activeElement;
+    const focusedId = focused?.id;
+    const selection = focused === nameInput || focused === bodyInput ? [focused.selectionStart, focused.selectionEnd] : null;
+    const focusedRoot = focused?.closest('[data-comment-id]')?.dataset.commentId;
+    const y = window.scrollY, x = window.scrollX;
+    busy(true); message('loading');
+    try { await refreshDiscussion(); status.textContent = words.refreshed; }
+    catch {
+      status.replaceChildren(make('span', '', words.manualRefreshFailed));
+      const retry = make('button', 'kt-discussion-action', words.retry); retry.type = 'button';
+      retry.addEventListener('click', manualRefresh); status.append(retry); scheduleReactionRead();
+    } finally {
+      busy(false);
+      const replacement = focused?.isConnected ? focused : focusedId ? document.getElementById(focusedId) :
+        focusedRoot ? document.getElementById('etheria-comment-' + focusedRoot)?.querySelector('.kt-discussion-reply-action') : null;
+      (replacement || refreshButton).focus({ preventScroll: true });
+      if (selection && replacement === focused) focused.setSelectionRange(...selection);
+      window.scrollTo(x, y);
+    }
+  }
+  refreshButton.addEventListener('click', manualRefresh);
+  function postError(error) {
+    if (error?.code === 'RATE_LIMITED') return words.rateLimited;
+    if (error?.code === 'VERIFICATION_FAILED') return words.verifyFailed;
+    if (error?.code === 'THREAD_LOCKED') return words.postLocked;
+    if (error?.fieldErrors?.replyToCommentId || error?.fieldErrors?.parentCommentId) return words.targetUnavailable;
+    if (error?.fieldErrors?.displayName) fieldError(nameInput, nameError, words.badName);
+    if (error?.fieldErrors?.body) fieldError(bodyInput, bodyError, words.emptyBody);
+    return words.postFailed;
+  }
+  async function submitDraft(event) {
+    event.preventDefault();
+    const target = state.activeTarget;
+    if (!target || state.posting || state.pending || state.uncertainTargets.has(target) || !validateDraft(target)) return;
+    const found = target.startsWith('reply:') ? findReply(target.slice(6)) : null;
+    if (target.startsWith('reply:') && !replyAllowed(found)) { saveDraft(); formStatus.textContent = words.targetUnavailable; updateSubmit(); return; }
+    if (!token) { formStatus.textContent = words.verifyWait; return; }
+    const usedToken = token;
+    const subscriptionSnapshot = { optIn: subscriptionEnabled && optIn.checked, email: draftEmail.value.trim(),
+      proof: subscriptionEnabled && optIn.checked ? subscriptionProof() : null, generation: ++subscriptionGeneration,
+      pageKey: context.pageKey, locale: context.locale, viewVersion: state.activeVersion };
+    subscriptionJob = null; privateEmail.value = ''; privatePanel.hidden = true;
+    token = null;
+    state.posting = true; refreshButton.disabled = true;
+    rootAction.disabled = true;
+    more.disabled = true;
+    section.querySelectorAll('.kt-discussion-reply-action').forEach(button => { button.disabled = true; });
+    formStatus.textContent = words.posting;
+    const payload = {
+      pageKey: context.pageKey, locale: context.locale, guideVersion: context.guideVersion,
+      displayName: nameInput.value, body: bodyInput.value,
+      pageHash: target === 'root' ? runtime.getContentHash() : '',
+      parentCommentId: target === 'root' ? null : found.root.id,
+      replyToCommentId: target === 'root' ? null : found.comment.id,
+      turnstileToken: usedToken, honeypot: honeypot.value,
+    };
+    if (subscriptionSnapshot.proof) payload.subscriptionProof = subscriptionSnapshot.proof;
+    try {
+      const posted = await runtime.transport.postComment(payload);
+      if (posted?.httpStatus !== 201) throw Error('DISCUSSION_POST_FAILED');
+      state.drafts.delete(target); state.uncertainTargets.delete(target);
+      state.activeTarget = null; state.activeReply = null; state.opener = null;
+      clearWidget(); composerHost.hidden = true; comments.before(composerHost);
+      postNotice.textContent = target === 'root' ? words.rootSuccess : words.replySuccess;
+      postNotice.dataset.state = 'success';
+      queueMicrotask(() => beginSubscription(subscriptionSnapshot, posted.commentId));
+      try {
+        await refreshDiscussion();
+        const rendered = posted.commentId && document.getElementById(`etheria-comment-${posted.commentId}`);
+        (rendered || postNotice).focus({ preventScroll: true });
+      } catch {
+        postNotice.textContent = words.refreshFailed;
+        postNotice.focus({ preventScroll: true });
+      }
+    } catch (error) {
+      saveDraft();
+      const knownCodes = ['RATE_LIMITED', 'VERIFICATION_FAILED', 'THREAD_LOCKED', 'VALIDATION_FAILED', 'PAYLOAD_TOO_LARGE', 'ORIGIN_NOT_ALLOWED', 'UNAUTHORIZED', 'NOT_FOUND', 'METHOD_NOT_ALLOWED'];
+      const uncertain = error?.outcomeUnknown === true || (error?.outcomeUnknown !== false && !knownCodes.includes(error?.code) && !error?.fieldErrors);
+      const messageText = uncertain ? words.postUnknown : postError(error);
+      if (uncertain) {
+        state.uncertainTargets.add(target); clearWidget(); formStatus.textContent = messageText;
+        verifyRetry.hidden = true;
+      } else if (error?.code === 'THREAD_LOCKED') {
+        for (const page of state.pages.values()) page.status = 'locked';
+        state.threadLocked = true;
+        postNotice.textContent = messageText;
+        try { await refreshDiscussion(); } catch { renderPage(); }
+      } else if (error?.fieldErrors?.replyToCommentId || error?.fieldErrors?.parentCommentId) {
+        const found = target.startsWith('reply:') ? findReply(target.slice(6)) : null;
+        if (found) {
+          if (error?.fieldErrors?.parentCommentId) found.root.canReply = false;
+          else found.comment.canReply = false;
+        }
+        renderPage();
+        formStatus.textContent = messageText;
+      } else {
+        state.posting = false;
+        renderChallenge(messageText);
+      }
+    } finally {
+      state.posting = false; cancel.disabled = false; refreshButton.disabled = state.pending;
+      replayLocation();
+      updateSubmit();
+      rootAction.disabled = state.pending;
+      more.disabled = state.pending;
+      section.querySelectorAll('.kt-discussion-reply-action').forEach(button => { button.disabled = state.pending; });
+    }
+  }
+  if (writeEnabled) {
+    rootAction.addEventListener('click', () => openComposer('root', rootAction));
+    cancel.addEventListener('click', () => closeComposer());
+    verifyRetry.addEventListener('click', () => { if (!state.pending && !state.posting && !state.uncertainTargets.has(state.activeTarget)) renderChallenge(); });
+    checkedNotPosted.addEventListener('click', () => {
+      if (state.pending || state.posting || !state.activeTarget ||
+          (state.activeTarget.startsWith('reply:') && !replyAllowed(findReply(state.activeTarget.slice(6))))) return;
+      state.uncertainTargets.delete(state.activeTarget); updateSubmit(); renderChallenge();
+    });
+    nameInput.addEventListener('input', saveDraft);
+    bodyInput.addEventListener('input', saveDraft);
+    optIn.addEventListener('change', () => { draftEmailWrap.hidden = !optIn.checked; saveDraft(); });
+    draftEmail.addEventListener('input', saveDraft);
+    form.addEventListener('submit', submitDraft);
+  }
+  async function loadVersion(guideVersion) {
+    if (state.pending || state.posting) return;
+    const cached = state.pages.get(guideVersion);
+    if (cached) {
+      state.activeVersion = guideVersion;
+      saveDraft(); message(); renderPage();
+      return;
+    }
+    busy(true); message('loading');
+    try {
+      const response = await read(guideVersion, null);
+      saveDraft();
+      const roots = response.currentVersion.comments;
+      state.pages.set(guideVersion, {
+        status: response.thread.status, comments: roots, seen: new Set(roots.map(root => root.id)),
+        nextCursor: response.currentVersion.nextCursor,
+      });
+      state.activeVersion = guideVersion;
+      message();
+    } catch {
+      message('error', () => loadVersion(guideVersion));
+    } finally {
+      busy(false); renderPage();
+    }
+  }
+  async function loadMore() {
+    const page = state.pages.get(state.activeVersion);
+    if (state.pending || state.posting || !page?.nextCursor) return;
+    saveDraft();
+    const guideVersion = state.activeVersion;
+    const cursor = page.nextCursor;
+    busy(true); message('loading');
+    try {
+      const response = await read(guideVersion, cursor);
+      for (const root of response.currentVersion.comments) {
+        if (!page.seen.has(root.id)) { page.comments.push(root); page.seen.add(root.id); }
+      }
+      page.nextCursor = response.currentVersion.nextCursor;
+      message();
+    } catch {
+      message('error', loadMore);
+    } finally {
+      busy(false); renderPage();
+    }
+  }
+  let locationGeneration = 0;
+  let pendingLocation = false;
+  let followingLocation = false;  let locationReplayScheduled = false;
+  let initializingLocation = true;
+  function replayLocation() {
+    if (!pendingLocation || state.pending || state.posting || followingLocation ||
+        initializingLocation || locationReplayScheduled) return;
+    locationReplayScheduled = true;
+    queueMicrotask(() => {
+      locationReplayScheduled = false;
+      if (pendingLocation && !state.pending && !state.posting && !followingLocation && !initializingLocation)
+        followLocation();
+    });
+  }
+  async function locateComment() {
+    const run = ++locationGeneration;
+    const id = location.hash.slice(1);
+    if (!new RegExp('^etheria-comment-[0-9a-f]{8}-[0-9a-f-]{27}$', 'i').test(id)) return;
+    const visited = new Set();
+    while (run === locationGeneration) {
+      const target = document.getElementById(id);
+      if (target) { target.focus({ preventScroll: true }); target.scrollIntoView({ block: 'center', behavior: 'instant' }); return; }
+      const page = state.pages.get(state.activeVersion);
+      if (!page?.nextCursor || visited.has(page.nextCursor)) break;
+      visited.add(page.nextCursor);
+      await loadMore();
+      if (state.pending || state.posting) return;
+    }
+    if (run === locationGeneration) postNotice.textContent = words.missing;
+  }
+  async function followLocation() {
+    // Browser history can move while controls are disabled. Keep the latest URL
+    // pending and replay it after the active read/post finishes, without overlap.
+    pendingLocation = true;
+    locationGeneration++;
+    if (state.pending || state.posting || followingLocation || initializingLocation) return;
+    followingLocation = true;
+    pendingLocation = false;
+    try {
+      if (!pendingLocation && !state.pending && !state.posting) await locateComment();
+    } finally {
+      followingLocation = false;
+      replayLocation();
+    }
+  }
+  window.addEventListener('hashchange', followLocation); window.addEventListener('popstate', followLocation);
+  more.addEventListener('click', loadMore);
+  loadVersion(context.guideVersion)
+    .then(() => pendingLocation ? undefined : locateComment())
+    .finally(() => { initializingLocation = false; replayLocation(); });
+})();

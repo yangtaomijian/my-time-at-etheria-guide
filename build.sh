@@ -7,3 +7,5 @@ quarto render .
 python3 -B tools/assemble-preview.py
 
 python3 -B tools/publication-metadata.py
+
+python3 -B tools/inject-discussions.py

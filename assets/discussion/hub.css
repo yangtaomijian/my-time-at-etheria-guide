@@ -1,0 +1,21 @@
+#quarto-document-content .etheria-discussion-hub {
+  max-width: 49rem;
+  min-width: 0;
+  margin-inline: auto;
+}
+.etheria-hub-breadcrumb { margin-block-end: 1rem; font-size: .9rem; }
+#quarto-document-content .etheria-hub-lead { color: var(--kt-text-muted); margin-block: .25rem 1.35rem; }
+#quarto-document-content .etheria-hub-status:not(:empty) {
+  color: var(--kt-text-muted);
+  background: var(--kt-surface-panel);
+  border: 1px solid var(--kt-border);
+  border-radius: var(--kt-radius-md);
+  padding: .85rem 1rem;
+}
+.etheria-hub-status:empty { display: none; }
+.etheria-discussion-hub ol { list-style: none; padding: 0; }
+.etheria-discussion-hub li { border-block-start: 1px solid var(--kt-border); padding: .9rem 0; min-width: 0; }
+#quarto-document-content .etheria-discussion-hub li p { margin: .3rem 0; overflow-wrap: anywhere; white-space: pre-line; }
+.etheria-discussion-hub li a { font-weight: 650; overflow-wrap: anywhere; }
+.discussion-info { display: flex; flex-wrap: wrap; gap: .15rem .9rem; color: var(--kt-text-muted); font-size: .85rem; }
+#quarto-document-content .etheria-hub-note { margin-block-start: 1.25rem; font-size: .8rem; color: var(--kt-text-muted); }

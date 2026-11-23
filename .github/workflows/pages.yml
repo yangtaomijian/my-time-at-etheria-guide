@@ -27,6 +27,8 @@ jobs:
       - name: Render and verify public pages
         env:
           ETHERIA_SITE_URL: ${{ vars.ETHERIA_SITE_URL }}
+          ETHERIA_DISCUSSION_ENABLED: ${{ vars.ETHERIA_DISCUSSION_ENABLED }}
+          ETHERIA_DISCUSSION_TURNSTILE_SITEKEY: ${{ vars.ETHERIA_DISCUSSION_TURNSTILE_SITEKEY }}
         run: |
           test -n "$ETHERIA_SITE_URL" || { echo 'Set the validated HTTPS site origin before deploying.'; exit 1; }
           sh build.sh

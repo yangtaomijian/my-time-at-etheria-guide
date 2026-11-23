@@ -5,6 +5,7 @@ from shutil import copy2, rmtree
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 import json
+import os
 
 ROOT = Path.cwd()
 CN = set('index journey quests exploration equipment memories gm-differences'.split())
@@ -21,6 +22,8 @@ def export(src, dest, pages):
     for rel, extensions in [('assets', PUBLIC_ASSETS), ('site_libs', RUNTIME)]:
         for f in sorted((src / rel).rglob('*')):
             if not f.is_file() or f.name.startswith('.'):
+                continue
+            if f.relative_to(src).as_posix().startswith('assets/discussion/') and os.environ.get('ETHERIA_DISCUSSION_ENABLED') != '1':
                 continue
             approved_share_card = dest.name != "en" and f.relative_to(src).as_posix() == "assets/social/etheria-guide.png"
             if f.suffix not in extensions and not approved_share_card:
