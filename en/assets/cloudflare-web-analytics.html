@@ -1,0 +1,15 @@
+<!-- Cloudflare Web Analytics -->
+<script data-etheria-analytics>
+(() => {
+  'use strict';
+  if (location.protocol !== 'https:' || location.hostname !== 'etheria.carambi.com') return;
+  const token = 'be5aface0950408eb7959376b5e466ad';
+  if (!/^[a-f0-9]{32}$/i.test(token)) return;
+  if (document.querySelector('script[data-cf-beacon]')) return;
+  const script = document.createElement('script');
+  script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  script.type = 'module';
+  script.dataset.cfBeacon = JSON.stringify({ token });
+  document.head.append(script);
+})();
+</script>

@@ -69,3 +69,4 @@ format:
     include-after-body:
       - assets/appearance.html
       - assets/shared/kt-production-shell.html
+      - assets/cloudflare-web-analytics.html
