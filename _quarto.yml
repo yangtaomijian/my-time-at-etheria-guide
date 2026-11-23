@@ -1,0 +1,72 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - journey.qmd
+    - quests.qmd
+    - exploration.qmd
+    - equipment.qmd
+    - memories.qmd
+    - gm-differences.qmd
+  resources:
+    - assets/**
+  post-render:
+    - python3 tools/apply-reading-shell.py
+website:
+  title: Etheria · 全汉化版攻略
+  search:
+    location: navbar
+    type: overlay
+    show-item-context: false
+  navbar:
+    title: false
+    left:
+      - text: 首页
+        href: index.qmd
+      - text: 主线与解谜
+        href: journey.qmd
+      - text: 支线任务
+        href: quests.qmd
+      - text: 探索与竞技场
+        href: exploration.qmd
+      - text: 装备与合成
+        href: equipment.qmd
+      - text: 剧情与回忆
+        href: memories.qmd
+      - text: 版本与 Q66
+        href: gm-differences.qmd
+  page-footer:
+    left: |
+      <div class="kt-publication-footer"><p>非官方玩家攻略 · My Time at Etheria</p><div class="kt-publication-footer-links"><span class="kt-publication-attribution">由 <a class="kt-carambi-link" href="https://carambi.com/zh/">Carambi</a> 维护</span><button class="kt-back-to-top" type="button">↑ 返回顶部</button></div></div>
+lang: zh-Hans
+language:
+  search-text-placeholder: 搜索攻略
+format:
+  html:
+    theme:
+      light: [default, assets/theme.scss]
+      dark: [default, assets/theme.scss, assets/shared/kt-dark.scss]
+    css:
+      - assets/shared/kt-foundation.css
+      - assets/shared/kt-publication.css
+      - assets/shared/kt-layout.css
+      - assets/shared/kt-components.css
+      - assets/shared/kt-theme.css
+      - assets/shared/kt-production-shell.css
+      - assets/shared/kt-mobile-header.css
+      - assets/reading-shell.css
+      - assets/architecture.css
+    toc: true
+    toc-title: 本页目录
+    toc-depth: 3
+    grid:
+      sidebar-width: 190px
+      body-width: 940px
+      margin-width: 165px
+      gutter-width: 22px
+    smooth-scroll: false
+    respect-user-color-scheme: true
+    include-after-body:
+      - assets/appearance.html
+      - assets/shared/kt-production-shell.html

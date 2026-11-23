@@ -1,0 +1,24 @@
+/* Progressive disclosure on the equipment page only. */
+#quarto-document-content details.etheria-equipment-fold {
+  margin-block: .5rem .8rem;
+}
+#quarto-document-content .etheria-gear-fold-note {
+  margin-inline-start: .6em;
+  color: var(--kt-text-muted);
+  font-size: .86em;
+  font-weight: 400;
+}
+#quarto-document-content details.etheria-equipment-fold[hidden],
+#quarto-document-content .etheria-gear-filtering > summary {
+  display: none !important;
+}
+#quarto-document-content details.etheria-gear-filtering {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+@media (max-width: 575px) {
+  #quarto-document-content .etheria-equipment-fold > summary {
+    min-height: 44px;
+  }
+}

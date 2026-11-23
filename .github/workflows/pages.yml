@@ -1,0 +1,49 @@
+name: Build and deploy Etheria
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: etheria-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.9.38'
+      - uses: actions/configure-pages@v5
+      - name: Render and verify public pages
+        env:
+          ETHERIA_SITE_URL: ${{ vars.ETHERIA_SITE_URL }}
+        run: |
+          test -n "$ETHERIA_SITE_URL" || { echo 'Set the validated HTTPS site origin before deploying.'; exit 1; }
+          sh build.sh
+          test -f public/robots.txt && test -f public/sitemap.xml
+          git diff --exit-code
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

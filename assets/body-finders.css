@@ -1,0 +1,73 @@
+/* Only the equipment and stage lookup controls and their opted-in rows. */
+/* The shared narrow layout sets table rows to display:block !important. */
+#quarto-document-content .kt-adaptive-records.kt-record-mode > table.table > tbody > tr.etheria-finder-target[hidden],
+.etheria-finder-target[hidden],
+.etheria-body-finder [hidden] { display: none !important; }
+
+.etheria-body-finder {
+  margin: 1rem 0 1.25rem;
+  padding: .8rem .95rem;
+  border: 1px solid var(--kt-border);
+  border-radius: var(--kt-radius-sm);
+  color: var(--kt-text);
+  background: var(--kt-surface-panel);
+}
+.etheria-body-finder p { margin: 0; }
+.etheria-finder-title { font-weight: 650; }
+.etheria-body-finder .etheria-finder-note,
+.etheria-body-finder .etheria-finder-status {
+  margin-top: .28rem;
+  font-size: .87rem;
+  color: var(--kt-text-muted);
+}
+.etheria-finder-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  align-items: end;
+  margin: .65rem 0 .42rem;
+}
+.etheria-finder-field {
+  display: grid;
+  flex: 1 1 11rem;
+  min-width: min(100%, 11rem);
+  gap: .22rem;
+  color: var(--kt-text);
+  font-size: .88rem;
+}
+.etheria-body-finder :is(input, select, button) {
+  min-height: 44px;
+  padding: .35rem .6rem;
+  border: 1px solid var(--kt-border-strong);
+  border-radius: var(--kt-radius-sm);
+  color: var(--kt-text);
+  background: var(--kt-surface);
+  font: inherit;
+  font-size: max(16px, .94rem);
+}
+.etheria-body-finder :is(input, select) { min-width: 0; width: 100%; }
+.etheria-body-finder button { cursor: pointer; }
+.etheria-body-finder button:disabled { cursor: default; opacity: .58; }
+.etheria-body-finder :is(input, select, button, a):focus-visible {
+  outline: 2px solid var(--kt-focus, var(--kt-accent));
+  outline-offset: 2px;
+}
+.etheria-finder-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem .65rem;
+  align-items: baseline;
+  margin-top: .45rem;
+  font-size: .86rem;
+}
+.etheria-finder-jumps a {
+  padding-block: .2rem;
+  color: var(--kt-accent);
+}
+#etheria-quest-stage-finder .etheria-finder-field { max-width: 28rem; }
+
+@media (max-width: 575px) {
+  .etheria-body-finder { padding: .65rem .72rem; }
+  .etheria-finder-field { flex-basis: 100%; }
+  .etheria-finder-jumps a { display: inline-flex; align-items: center; min-height: 44px; }
+}

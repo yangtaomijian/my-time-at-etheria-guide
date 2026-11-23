@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 470" role="img" aria-labelledby="title"><title id="title">第二段矿井：中央岔路、东长廊与矿堆旁矿车</title>
+<rect width="640" height="470" rx="10" fill="#f5f8f9" />
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#295d73" stroke-width="2" /></marker></defs>
+<path data-from="entrance" data-to="junction" d="M300 370V190" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="junction" data-to="C1" d="M300 190V84" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="junction" data-to="C2" d="M300 190H100V300" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="junction" data-to="east" d="M300 190H530" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="east" data-to="C3" d="M530 190V130L560 84" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="east" data-to="C4" d="M530 190V250H500V280H540V325" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="junction" data-to="cart" d="M300 190V350H185V400" fill="none" stroke="#295d73" stroke-width="3" />
+<circle data-node="junction" cx="300" cy="190" r="5" fill="#295d73" />
+<circle data-node="east" cx="530" cy="190" r="5" fill="#295d73" />
+<g data-node="C1"><rect x="230" y="34" width="140" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="300.0" y="64.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">C1 · 中央北端</text>
+</g>
+<g data-node="C2"><rect x="15" y="300" width="170" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="100.0" y="330.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">C2 · 西侧凹处</text>
+</g>
+<g data-node="C3"><rect x="480" y="34" width="140" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="550.0" y="64.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">C3 · 东侧上端</text>
+</g>
+<g data-node="C4"><rect x="470" y="325" width="140" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="540.0" y="355.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">C4 · 最右侧</text>
+</g>
+<g data-node="cart"><rect x="100" y="400" width="170" height="54" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="185.0" y="432.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">第二辆矿车 · 矿堆旁</text>
+</g>
+<g data-node="entrance"><rect x="290" y="370" width="185" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="382.5" y="400.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">来自首车北出口</text>
+</g>
+<text x="300" y="164" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">中央岔路</text>
+<text x="415" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">东侧长廊</text>
+<text x="576" y="141" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">东北</text>
+<text x="540" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">绕过阻挡</text>
+<text x="150" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">向西南返回</text>
+</svg>

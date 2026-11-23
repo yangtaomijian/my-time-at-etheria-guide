@@ -1,0 +1,105 @@
+---
+title: My Time at Etheria
+pagetitle: "《我的艾瑟瑞尔时光》全汉化版攻略 | My Time at Etheria"
+subtitle: 全汉化版 · 中文攻略
+description: "《我的艾瑟瑞尔时光》（My Time at Etheria）全汉化版攻略：查主线 Q1–17、支线与解谜，了解竞技场、装备合成和通关后回忆的解锁方法。"
+toc: false
+page-layout: full
+---
+
+::: {.lead}
+卡在剧情里？按任务、地点或眼前的卡点找下一步。想做武器、打秘境或补剧情，也可以直接查对应栏目。
+:::
+
+::: {.preview-note #gm-edition-entry}
+本攻略对应**超级小黑发布的《我的艾瑟瑞尔时光》全汉化版**。刚到榆树村，可以顺路去北边找淋淋；只想走主线，直接从下面选你当前的地点就行。
+
+[《女王驾到》怎么走](gm-differences.qmd#gm-queen) · [我玩的是英文原版（Official FINAL）](gm-differences.qmd#gm-main)
+:::
+
+```{=html}
+<nav class="section-menu" aria-label="五类攻略入口">
+<a class="section-entry" href="journey.html"><span class="section-num">01</span><span><span class="section-label">主线与解谜</span><span class="section-description">按任务或地点找下一步，顺路查附近的支线。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="quests.html"><span class="section-num">02</span><span><span class="section-label">支线任务</span><span class="section-description">对应主线阶段，看现在能接什么、顺路做什么、何时回来交付。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="exploration.html"><span class="section-num">03</span><span><span class="section-label">探索与竞技场</span><span class="section-description">四处遗忘秘境、远古之灵、竞技场报名与奖牌商店。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="equipment.html"><span class="section-num">04</span><span><span class="section-label">装备与合成</span><span class="section-description">常规与终极武器、防具饰品、升级材料、灵魂石、核心与食物。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="memories.html"><span class="section-num">05</span><span><span class="section-label">剧情与回忆</span><span class="section-description">雪铃村的第三段剧情、三个回忆条目，以及通关后继续。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+</nav>
+```
+
+## 卡住了？先找下一步 {#find-next}
+
+- **知道任务：** [启程与新家 Q1–10](journey.html#journey-group-start) · [大陆旅程 Q11–14](journey.html#journey-group-travel) · [远行与终章 Q15–17](journey.html#journey-group-finale)
+- **知道地点：** [城堡大厅](#castle-help) · [费穆拉矿井](#mine-help) · [雷鸥港](#port-help)
+
+### 利莫里亚城堡大厅 {#castle-help}
+
+- **还没见到国王：** [查觐见前该找谁](journey.qmd#castle-audience)。
+- **拿到蓝色房屋钥匙，但日志没出现Q7：** [查觐见后的下一步](journey.qmd#lemuria-next)。
+- **已经接到Q7，只是不知道新家在哪：** [查新家位置](journey.qmd#visit-new-home)。
+
+### 费穆拉矿井 {#mine-help}
+
+- **没坐过矿车，背包里只找到几个车轮：** [对照第一批车轮的四处地标](journey.qmd#four-wheels-cart)。
+- **已经坐过第一次车，现在在矿堆旁：** [查第二辆车所需的另一批车轮](journey.qmd#second-cart)。
+
+### 雷鸥港 {#port-help}
+
+- **刚到港口，问居民只有普通台词：** [查如何开启找船的线索](journey.qmd#regull-arrival)。
+- **已和四位计入进度的居民交谈，但还没接到Q15，码头也不让上船：** [查去哪里接委托](journey.qmd#emerald-next)。
+- **打赢贝希摩斯，背包却没有爪：** [查爪的掉落条件](journey.qmd#behemoth-proof)。
+- **背包里已经有爪，要回交：** [查船长的验收条件](journey.qmd#behemoth-voyage)。
+
+### 其他剧情后的常见卡点 {#more-stuck}
+
+- [利莫里亚市场买不到辛辣块茎，做不了炸酥肉](journey.qmd#home-cooking)。
+- [到了阿里代尔堡垒，日志仍是「我们的新家」](journey.qmd#fort-aridale-handoff)。
+- [打完红海遗迹祭坛的战斗，Q11仍未完成](journey.qmd#redsea-altar)。
+- [已有Q14，阿特勒斯镇西出口仍提醒去旅馆](journey.qmd#artellus-next)。
+
+## 主线之外，先选一个目标 {#goals}
+
+:::: {.goal-grid}
+::: {.goal-card}
+::: {.goal-tag}
+装备目标
+:::
+### 做出一把终极武器
+
+阿尔法之诺、欧米伽之愿、忠诚连接、祈愿星各有自己的配方。刚采到秘银时，先数背包里的锭和水晶再决定做哪把。
+
+[看四把武器与取得方式](equipment.qmd#ultimate)
+:::
+::: {.goal-card}
+::: {.goal-tag}
+探索与挑战
+:::
+### 挑战秘境或竞技场
+
+四处元素秘境提供不同的核心配方；竞技场可推进挑战、解锁特殊战斗，并用奖牌兑换物品。
+
+[看秘境与竞技场](exploration.qmd)
+:::
+::: {.goal-card}
+::: {.goal-tag}
+额外剧情
+:::
+### 补齐第三段回忆
+
+两条晚期支线汇合到雪铃村的额外剧情。自然剧情的发生和之后的回忆回放分开查。
+
+[看剧情解锁与回放条件](memories.qmd#third-scene)
+:::
+::::
+
+## 这几类目标怎样连起来？ {#connections}
+
+::: {.relation}
+联盟链接关联欧米伽之愿的配方和额外剧情；国王的请求关联竞技场扩展商店、暗孢传送门分支、武器配方和额外剧情。
+:::
+
+::: {.quick-links}
+[两条晚期任务](quests.qmd#late) · [竞技场商店](exploration.qmd#arena) · [重要材料](equipment.qmd#materials) · [剧情条件](memories.qmd#third-scene)
+:::
+
+刚开始玩，可以先看[任务日志与实际进度](journey.qmd#basics)；已经安装任务指引插件时，可查看[N开导航、H选择目标等用法](journey.qmd#quest-assist)。

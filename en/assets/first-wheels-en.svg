@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 580" role="img" aria-labelledby="title"><title id="title">Entrance mine: connected Wheel branches and first cart</title>
+<rect width="640" height="580" rx="10" fill="#f5f8f9" />
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#295d73" stroke-width="2" /></marker></defs>
+<path data-from="entrance" data-to="central" d="M330 535V250" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="central" data-to="east-upper" d="M330 250V150H550" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="central" data-to="left" d="M330 250H110" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="left" data-to="cart" d="M110 250V187" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="cart" data-to="A2" d="M110 137V118H130V100H110V82" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="left" data-to="A3" d="M110 250V325H140V380" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="east-upper" data-to="A4" d="M550 150V380" fill="none" stroke="#295d73" stroke-width="3" />
+<path data-from="entrance" data-to="A1" d="M330 490H420" fill="none" stroke="#295d73" stroke-width="3" />
+<circle data-node="central" cx="330" cy="250" r="5" fill="#295d73" />
+<circle data-node="left" cx="110" cy="250" r="5" fill="#295d73" />
+<circle data-node="east-upper" cx="550" cy="150" r="5" fill="#295d73" />
+<g data-node="A2"><rect x="40" y="32" width="140" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="110.0" y="63.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">A2 · Upper left</text>
+</g>
+<g data-node="cart"><rect x="40" y="137" width="140" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="110.0" y="168.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">First cart</text>
+</g>
+<g data-node="A3"><rect x="70" y="380" width="140" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="140.0" y="411.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">A3 · Lower left</text>
+</g>
+<g data-node="A4"><rect x="480" y="380" width="140" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="550.0" y="411.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">A4 · Far right</text>
+</g>
+<g data-node="A1"><rect x="420" y="465" width="160" height="50" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="500.0" y="496.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">A1 · South</text>
+</g>
+<g data-node="entrance"><rect x="245" y="535" width="170" height="38" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2" />
+<text x="330.0" y="560.0799999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">South entrance</text>
+</g>
+<text x="220" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">Concealed west passage</text>
+<text x="445" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">Upper east passage</text>
+<text x="322" y="326" text-anchor="end" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">Central shaft</text>
+<text x="550" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">Dark descent</text>
+<text x="105" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">Bend east</text>
+<text x="403" y="449" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">Dark opening east</text>
+</svg>

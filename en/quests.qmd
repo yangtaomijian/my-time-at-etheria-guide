@@ -1,0 +1,301 @@
+---
+title: Side Quests
+description: Find optional quests by story stage, or check who to talk to, what to bring and where to hand it in.
+toc-depth: 4
+---
+
+Looking for quests you can pick up now? Start with your current story stage. If a quest is already in your journal, look it up by name.
+
+::: {.preview-note}
+[Quests by story stage](#by-stage) · [Local requests](#local) · [Late-game quests](#late)
+:::
+
+## Side quests by story stage {#by-stage}
+
+**Before leaving for Sunkurst Farm:** Pick up [The perfect recipe 2](#perfect-recipe-2) at Dhalium Inn after the contract scene. If you missed the first conversation, you can still visit the inn and farmhouse after dealing with Gerard.
+
+| Story stage | On the way | Where to follow up |
+| --- | --- | --- |
+| <span id="stage-forest"></span>[Forest, Elm Village and Dhalium](journey.qmd#forest) · Q1–2 | Start [The Messenger](#messenger) in Elm Village. | Take the letter to Dhalium. |
+| <span id="stage-dhalium"></span>[Dhalium and Sunkurst Farm](journey.qmd#dhalium) · Q3–4 | Deliver the letter and pick up [recipe 1](#perfect-recipe-1) and [recipe 2](#perfect-recipe-2). | After Gerard, return to Dhalium Inn before revisiting the farmhouse. |
+| <span id="stage-lemuria"></span>[Windmill Village and Lemuria](journey.qmd#lemuria) · Q5–6 | Deliver the letter. Accept [recipe 3](#perfect-recipe-3) in Windmill and [recipe 4](#perfect-recipe-4) and [recipe 5](#perfect-recipe-5) in Lemuria. | Shop at the west market stall. After seeing the King, return to the slums to start [Home at last](#home-at-last). |
+| <span id="stage-home"></span>[New home and household requests](journey.qmd#home) · Q7–10 | Help the red Slib in Green Valley, collect the key and read the old notes to start [Finding Slibs](#slibs). | Look for the friends as you reach later areas. |
+| <span id="stage-redsea"></span>[Fort Aridale and Redsea Ruins](journey.qmd#redsea) · Q11 | Deliver the letter and start [The Cursed Harness](#cursed-harness) at the fort. | Fight west of the ruins and hand in at the fort before starting the glove quest. |
+| <span id="stage-femura"></span>[Balora, Paradise Isle and the mine](journey.qmd#femura) · Q12 | Start [Purple Tree](#purple-tree) and, after the festival, [recipe 6](#perfect-recipe-6). Look for the [blue Slib](#slibs-friends) in the cave connected to Green Valley. | Make both deliveries, then return to the abandoned house for the blue Slib's recipe. |
+| <span id="stage-artellus"></span>[Artellus and Deep Canyons](journey.qmd#artellus) · Q13 | Find the brown Slib and deliver the letter. Start [Crafting the Unknown](#crafting-the-unknown) and, if you've handed in the harness, [The Cursed Gloves](#cursed-gloves). | Hand in the gloves before the northern confrontation with Ivan if you want them this chapter. Get the horn for the bracelet in Q15. |
+| <span id="stage-emerald"></span>[Emerald Forest and Regull Port](journey.qmd#emerald) · Q14 | After rescuing Drey, revisit Artellus to hand in the gloves and use the stump for [The Legendary Orichalcum](#legendary-orichalcum). Look for the green Slib and start [The Cursed Boots](#cursed-boots) at the port. | Finish the letter route at the port. Claim all three recipes before returning to the red Slib. |
+| <span id="stage-ocean"></span>[Infested Cave and setting sail](journey.qmd#ocean) · Q15 | Go deeper into the cave for the boots or Orichalcum. The main route needs an ordinary Behemoth's claw. | Return to port for the boots. Save any horn for the bracelet; the captain checks the claw without taking it. |
+| <span id="stage-arcius"></span>[Arcius and Snowbell Village](journey.qmd#arcius) · Q16 | After [returning to Snowbell](journey.qmd#arcius-story-return), start [Union Link](#union-link) there and [The King's Request!](#the-kings-request) at Regull Port. | Once both quests are complete, rest in Snowbell for the extra scene. |
+| <span id="stage-finale"></span>[Fortress of Souls and ending](journey.qmd#finale) · Q17 | Use the [finale checklist](journey.qmd#finale-revisits) to wrap up quests and material hunts. | [Save after the ending](journey.qmd#finale-credits-save). To revisit towns, [leave the fortress to the south](journey.qmd#finale-after-clear). |
+
+For Garet’s four visits in Q6, see [the Lemuria walkthrough](journey.qmd#slums-four-visits). The bread, Fried Meat and family requests required for Q7 are in the [main-story household checklist](journey.qmd#help-omega-households).
+
+## Local requests {#local}
+
+You can do each of the six recipe requests on its own. Once you have the recipe, you'll still need ingredients to [cook the dish](equipment.qmd#crafting). [Compare food effects](equipment.qmd#food-use) if you’re deciding what to make.
+
+| Request | Materials or next stop | Reward |
+| --- | --- | --- |
+| [The perfect recipe 1](#perfect-recipe-1) · Q50 | 5 Monster Meat | Meat Sandwich Recipe |
+| [The perfect recipe 2](#perfect-recipe-2) · Q51 | Dhalium Inn → Sunkurst Farm | Wild Farm Stew Recipe |
+| [The perfect recipe 3](#perfect-recipe-3) · Q52 | 4 Poultry Meat | Exotic Stew Recipe |
+| [The perfect recipe 4](#perfect-recipe-4) · Q53 | 10 Gali Root | Mixed Root Stew Recipe |
+| [The perfect recipe 5](#perfect-recipe-5) · Q54 | 3 Large Eggs | Berryful Cake Recipe |
+| [Home at last](#home-at-last) · Q55 | Windmill Village after the royal audience | Heavy Core Recipe |
+| [Purple Tree](#purple-tree) · Q57 | 3 Purple Tree Bark | Lvl.2 Protection Core |
+| [The perfect recipe 6](#perfect-recipe-6) · Q58 | 20 Octopi Meat, after the festival | Octo Dumplings Recipe |
+| [Crafting the Unknown](#crafting-the-unknown) · Q59 | Five different monster materials | Monster Bracelet |
+| [The Legendary Orichalcum](#legendary-orichalcum) · Q60 | 1 Orichalcum | Meteor Core |
+
+### The perfect recipe 1: five Monster Meat {#perfect-recipe-1}
+
+Talk to **Amy Pierce** in a house in southwest **Dhalium Town**. Buy missing **Monster Meat** from the ingredient merchant on the west side of Lemuria Market for **88 G each** (440 G for all five). Bring five back to Amy and hand them in for the **Meat Sandwich Recipe**.
+
+### The perfect recipe 2: visit the inn, then the farm {#perfect-recipe-2}
+
+1. After the contract scene, before your first trip to Sunkurst Farm, talk to **Mat Calib** at the inn in east Dhalium. He tells you about the bandits.
+2. Follow the main story through the encounter with **Gerard**. Return to Mat at the inn and watch the couple's conversation about going home.
+3. Visit the farmhouse at **Sunkurst Farm** and talk to **Shiela Calib** for the **Wild Farm Stew Recipe**. You don't need to bring ingredients.
+
+Visited the farm before you picked up the quest? After beating Gerard, talk to Mat at the inn, then check in with Shiela at the farmhouse. Mat's opening dialogue changes after your first farm visit.
+
+### The perfect recipe 3: four Poultry Meat {#perfect-recipe-3}
+
+Speak to **Arisa Longan** in the item shop on the east side of **Windmill Village**. The west-side ingredient merchant in **Lemuria Market** sells **Poultry Meat** for **103 G each** (412 G for all four). Bring four back to Arisa for the **Exotic Stew Recipe**.
+
+### The perfect recipe 4: ten Gali Root {#perfect-recipe-4}
+
+Talk to **Deena Gosa** in the house near the middle of Lemuria's Lower District. Buy **Gali Root ×10** from the west-side ingredient merchant in Lemuria Market for **45 G each** (450 G in total), then take it back to Deena for the **Mixed Root Stew Recipe**. The Windmill Village item shop also sells it.
+
+### The perfect recipe 5: three Large Eggs {#perfect-recipe-5}
+
+Speak to the **head chef** in the west kitchen of **Lemuria Castle**. **Roc Birds** in the Redsea Desert can drop **Large Eggs**. You can also buy them at the Artellus item shop for **90 G each** (270 G for three). Bring three to the chef and choose **Yes** to receive the **Berryful Cake Recipe**.
+
+### Home at last: the Heavy Core Recipe {#home-at-last}
+
+1. After the royal audience, return to the slum house and speak to the Feraldian who told you about the sewers.
+2. Talk to **Alphy Liwin** and the child outside the house in southwest **Windmill Village**. They move aside once the conversation ends.
+3. Enter and inspect the glowing spot at the north end of the room for the **Heavy Core Recipe**. Picking it up finishes the quest.
+
+You can find the child again near the southwest side of the village for a short follow-up. Your reward is the recipe, so you'll still need to [make the Heavy Core](equipment.qmd#core-install) before equipping it.
+
+### Purple Tree: three Purple Tree Bark {#purple-tree}
+
+Talk to **June Junes** on the west side of **Balora Town**. **Toxic Trees** on the world map around Balora and Artellus sometimes drop the bark. Bring June **Purple Tree Bark ×3** for a **Lvl.2 Protection Core** that's ready to [equip](equipment.qmd#equipment-cores).
+
+### The perfect recipe 6: twenty Octopi Meat {#perfect-recipe-6}
+
+After the Sea Hunting Festival, talk to **Catalina Fisher** in southeast **Paradise Isle**. Use the **Octopi Meat** you picked up at the festival, then buy the rest at the island's central item stall for **64 G each** (1,280 G for all twenty). Hand in twenty to Catalina for the **Octo Dumplings Recipe**.
+
+### Crafting the Unknown: five materials for a Monster Bracelet {#crafting-the-unknown}
+
+Find **Bik Phyllus** in northwest **Artellus Town**, in the house just east of the glove requester's home. Bring Bik everything in the table below in one trip to get a **Monster Bracelet**.
+
+| Material | Amount | Where to get it |
+| --- | ---: | --- |
+| Insect Shells | 5 | Chance drop from Blood Wasps around Elm Village and Dhalium. |
+| Minotaur Horn | 5 | Minotaurs in the Redsea Desert. |
+| Roc Bird Claw | 5 | Roc Birds in the Redsea Desert. |
+| Tentacle | 5 | Check the festival drops first; Octopi near Balora and Artellus can also drop them. |
+| Behemoth Horn | 1 | An ordinary Behemoth can drop it in the Infested Cave; Dark Behemoth always drops one. |
+
+This request needs a **horn**. If you're also making the Beastly Claws, plan for **four horns total**: one for Bik and three for the weapon. The captain only checks your claw and leaves it in your inventory. See [cave stops and turn-ins](journey.qmd#ocean-revisits) and [material totals](equipment.qmd#behemoth-materials).
+
+### The Legendary Orichalcum: one piece, two uses {#legendary-orichalcum}
+
+After the Emerald Lab scenes, talk to the Feraldian researcher inside the **stump between Artellus Town and Emerald Garden**. The town entrance is just north of the mayor's house. **Dark Behemoth** drops Orichalcum in the depths of the **Infested Cave**.
+
+Choose **Give Orichalcum** to spend one piece and receive a **Meteor Core**. If you want to make [Wishing Star](equipment.qmd#wishing-star) too, save a second piece for it. You can [return to Dark Behemoth](equipment.qmd#behemoth-materials) for another.
+
+Leaving the stump takes you into Emerald Garden. To get back to Artellus, leave through the [glow at the south end of the garden](journey.qmd#regull-arrival), return to the world map through the forest, then go back through Deep Canyons.
+
+## The Messenger {#messenger}
+
+### Pick up the letter in Elm Village {#messenger-start}
+
+Find **Rhillis Hart** in the house northwest of Elm Inn. He gives you a letter and asks you to take it unopened to a Feraldian slave in Dhalium. Finish the route to get the **Mana-Charge Bracelet**.
+
+### Make the seven deliveries in order {#messenger-route}
+
+The journal shows the next town after each conversation. All seven recipients are outside.
+
+| Stop | Where to look | Next stop |
+| --- | --- | --- |
+| <span id="messenger-dhalium"></span>Dhalium Town · Q2–4 | Feraldian slave east of a house entrance in the north of town | Windmill Village |
+| <span id="messenger-windmill"></span>Windmill Village · Q5 | Feraldian slave east of the inn door | Lemuria slums |
+| <span id="messenger-lemuria"></span>Lemuria · Q6 | Feraldian in the southeastern slums | Fort Aridale |
+| <span id="messenger-fort"></span>Fort Aridale · Q11 | Feraldian slave on the north side of the fort, near the one with a cursed harness | Balora Town |
+| <span id="messenger-balora"></span>Balora Town · Q12 | Feraldian slave in southwest Balora | Paradise Isle |
+| <span id="messenger-paradise"></span>Paradise Isle · Q12 | Feraldian slave near the middle of the island's south side | Artellus Town |
+| <span id="messenger-artellus"></span>Artellus Town · Q13–14 | Feraldian on the street in front of the equipment and magic shops | Regull Port |
+
+### Finish in Regull Port after rescuing Drey {#messenger-finish}
+
+After all seven deliveries and [the rescue in the Emerald Lab](journey.qmd#lab-rescue-return), speak to **Rhillis Hart** in northeastern **Regull Port**. The final conversation completes the quest and gives you the bracelet. If a recipient doesn't mention the letter, check your journal for a missed stop. The Artellus recipient can also be unavailable until you advance the local story.
+
+## Finding Slibs {#slibs}
+
+Find the red Slib’s three friends and return to the abandoned house to claim four core recipes.
+
+### Read the old notes and talk to the red Slib {#slibs-start}
+
+1. Visit the abandoned house in **Green Valley** during the New Home chapter. Speak to **Su** outside so he rejoins. If Su ran off when you entered the valley, speak to him before you try to leave. After hearing the call for help, head south and defeat the Darkspore threatening the red Slib.
+2. Finish the conversation to get the key, then enter the house and inspect the **old notes**.
+3. Go back outside and talk to the red Slib. After Su offers to find its friends, check that **Finding Slibs** appears in the journal.
+
+### Find each friend, then claim its recipe {#slibs-friends}
+
+Talk to each friend to send it home, then speak to it again outside the abandoned house. You can find them in any order and collect several recipes on one return trip.
+
+| Friend | Where to find it | Where it waits at the house | Reward |
+| --- | --- | --- | --- |
+| Blue | The cave connected to the north side of Green Valley | East of the house, toward the north | Mending Core Recipe |
+| Brown | East of the equipment and magic shops in Artellus | West of the house | Tremor Core Recipe |
+| Green | Southeast Regull Port | South of the house | Rending Core Recipe |
+
+### Return to the red Slib for the final recipe {#slibs-finish}
+
+Claim the three recipes from the blue, brown and green Slibs before speaking to the red Slib again. It gives you the **Explosive Core Recipe** and completes the quest. If you found all three but the quest is still open, check which recipes you have collected outside the house.
+
+[Healing Core](equipment.qmd#common-cores) · [Installing cores](equipment.qmd#core-install) · [Side quests by stage](#by-stage)
+
+## The three cursed equipment quests {#cursed}
+
+For each quest, accept the request, beat that item's cursed spirit, and return to the requester. Hand in the **harness**, then the **gloves**, then the **boots**.
+
+| Quest | Where you go | Reward |
+| --- | --- | --- |
+| [The Cursed Harness](#cursed-harness) · Q61 | Q11: Fort Aridale → Redsea Desert → Fort Aridale | Punishing Harness |
+| [The Cursed Gloves](#cursed-gloves) · Q62 | Q13: Artellus → Deep Canyons → Artellus | Punishing Gloves |
+| [The Cursed Boots](#cursed-boots) · Q63 | Q14–15: Regull Port → Infested Cave → Regull Port | Punishing Boots |
+
+### The Cursed Harness: Fort Aridale and the Redsea Desert {#cursed-harness}
+
+1. After the new-home story, talk to the Feraldian slave on the north side of **Fort Aridale** who can't take off his harness. The Feraldian nearby is the one who takes the letter for The Messenger.
+2. Leave the fort by its south exit into the desert's long entrance corridor. From that corridor, count each screen transition: **south → south → east → east → south → south → west → west → west**. The first eight lead to the area outside the ruins. The ninth leads to a smaller area with the spirit near the middle.
+3. Defeat the spirit and return to the same Feraldian for the **Punishing Harness**.
+
+### The Cursed Gloves: Artellus and Deep Canyons {#cursed-gloves}
+
+1. After handing in the harness, talk to the Feraldian in a house in northwestern **Artellus Town**.
+2. Leave town to the west. In the first Deep Canyons area, use the **southern of the two west exits**. Take a west exit three more times, using the one toward the north on the last screen.
+3. Defeat the cursed spirit on the west side of the small area. Return to the requester for **Punishing Gloves**. To claim them in Q13, hand them in before [Ivan's northern confrontation](journey.qmd#artellus-chimera).
+
+If the requester only brings up the main story, finish the Emerald Lab scenes and come back. A previous win against the gloves' spirit still counts.
+
+### The Cursed Boots: Regull Port and the Infested Cave {#cursed-boots}
+
+1. After handing in the gloves, speak to the Feraldian in **southwestern Regull Port**. If he is absent, finish the Emerald Lab story first.
+2. In the **Infested Cave**, go east from the entrance, then take the north exit from the larger area. The spirit is toward the southwest of the deep section.
+3. Win and go back to the requester for the **Punishing Boots**.
+
+[Redsea Desert](journey.qmd#redsea) · [Deep Canyons](journey.qmd#artellus) · [Infested Cave](journey.qmd#ocean)
+
+## Late-game quests: Union Link and The King's Request! {#late}
+
+You can start both quests after [returning to Snowbell in Q16](journey.qmd#arcius-late-tasks). Tackle either one first. You can finish both before entering the Fortress of Souls.
+
+| Goal | What to do |
+| --- | --- |
+| Two rings and Omega's Wish Recipe | Win [Union Link](#union-link) and watch the conversation. |
+| More stock at the Medal Shop | Accept [The King's Request!](#the-kings-request). |
+| Wishing Star Recipe and rare materials | Win [the first portal fight](#portal-branch). |
+| Finish The King's Request! | Win at the portal and in the Battle Arena, then speak to the soldier. |
+| See Snowbell's third scene | Win Union Link, hand in The King's Request!, and [rest in Snowbell](memories.qmd#third-scene). |
+
+### Union Link {#union-link}
+
+1. In **Snowbell Village**, speak to the Feraldian in the house just to the right of where you rest. Finish the conversation about Garet.
+2. Head to **northern Elm Village**. Enter the challenge area to trigger the scene. Prepare Drey before going in; it's a solo battle.
+3. Defeat **Garet**. Leveling him up makes him stronger when you fight him here.
+4. Finish the dialogue after the win to receive **Drey's Ring** and **Garet's Ring** and complete the quest. The **Omega's Wish Recipe** comes from the battle reward; see [the weapon's ingredients](equipment.qmd#omegas-wish).
+
+Lost the fight? Restore Drey's HP and MP, check his AP, and replace any items you used before returning to the same spot. You don't get those items back.
+
+#### Prepare Drey for the solo battle {#union-battle}
+
+Equip a [Healing Core](equipment.qmd#common-cores) in a Magic Core slot and bring backup healing items. Drey cannot use partner abilities while the others are out of the party. Build AP with basic attacks. **Starfall**, from the Adventurer Soulstone, costs **45 AP and 50 MP**; a heal costs **20 MP**. Watch the turn order: Garet's charge attacks can delay Drey's next turn. He also uses earth spells and multihit attacks, so don't wait for Drey's HP to get too low before healing.
+
+The party and its partner abilities return after the victory dialogue. The fight doesn't refill Drey's HP, MP or AP or give back any items, so check his supplies before moving on.
+
+<details id="union-sample">
+<summary>Example: a solo win at level 55</summary>
+
+| | Level-55 example |
+| --- | --- |
+| Level and SP | Both level 55. Drey spent 54 SP: 24 Attack, 20 Defense and 10 Agility. |
+| Gear | Ancient Blade, Ancient Buckler, Knight's Helmet, Knight's Armor, Lucky Bracelet, Sturdy Belt and Adventurer Soulstone. |
+| Cores | Healing Core, Torrent Core and Chill Core in the armor's three Magic Core slots. The latter two were not used. |
+| Starting resources | 4,018 HP, 743 MP, 0 AP, no extra barrier; 12 High Potions, 8 High Mana Potions, 2 Eyedrops and 4 Remedies. |
+| Plan | Heal below about 65% HP; 19 heals, 6 Starfalls, and otherwise basic attacks with their usual weapon effects. |
+| Cost | 380 MP for healing; 300 MP and 270 AP for Starfall. Used 1 High Mana Potion (restores 500 MP; 550 G to replace at Snowbell). |
+| Result | 51 turns; 2,618 HP, 563 MP and 24 AP remaining. Earned 324 G, the recipe and both rings. |
+
+This run used help with Starfall's directional inputs. Actual supplies and time depend on your gear and actions.
+
+</details>
+
+#### Optional: tell the villager in Snowbell {#union-return}
+
+After the win, you can go back to the villager next to the Snowbell rest house for a follow-up conversation. The battle and the dialogue right afterward are enough for the rings, the recipe and [the Union Link requirement for the third scene](memories.qmd#third-scene).
+
+### The King's Request! {#the-kings-request}
+
+1. After the Arcius story, speak to the Lemurian soldier in the southeast part of **Regull Port**. Accepting the quest also expands the Medal Shop stock.
+2. Win the [Darkspore portal battle](#portal-branch) and the arena's [Special Challenge](#special-challenge), in either order.
+3. Report back to the same soldier for **50,000 G**. This completes the quest and counts toward Snowbell's extra scene.
+
+#### The portal and the Wishing Star Recipe {#portal-branch}
+
+From Elm Village's south exit, return to the early world map. The first portal is toward the north. Walk into it to fight the **Darkspore Demon**. Winning awards the **Wishing Star Recipe** and materials including **Dark Matter ×1, Mythril Crystal ×2 and Mythril Bar ×5**. **Loyal Link** uses Dark Matter, which is a separate item from Dark Essence.
+
+#### Check its form before choosing an element {#portal-forms}
+
+The dark form uses **Transform** to take one of four forms, reverting after five turns. Fire, water and earth may still use the name Darkspore Demon.
+
+| Form | Absorbs | Weak to |
+| --- | --- | --- |
+| Dark | Dark | Light and light Synth |
+| Lightspore Demon | Light | Dark and dark Synth |
+| Fire | Fire | Water and water Synth |
+| Water | Water | Wind and wind Synth |
+| Earth | Earth | Fire and fire Synth |
+
+Even a basic attack can trigger an elemental weapon effect. A light attack from Ancient Blade can heal the light form, and a fire attack from Chimera Claymore can heal the fire form. Use a physical ability, heal or defend instead while that form is active. **Starfall**, **Earth Barrage** and **Celestial Roar** deal physical damage, though the earth form has higher physical defense. Su's element change is random; rely on spells you can already use.
+
+Save and heal before entering. Bring MP recovery and give more than one party member a way to heal. Confusion can replace an action, and Silence blocks spells. Use **Remedy** to clear either one from an ally; it also clears Poison and Blind. **Eyedrops** clear Blind only. These statuses usually wear off after three turns. The light form can drain MP.
+
+<details>
+<summary>Example: winning the first portal battle at level 55</summary>
+
+One level-55 party (54 SP each and 12 equipped cores) won in 117 turns after seeing all five forms. In this run, the boss had **999,999 max HP** before and after Transform. Su went down twice and Garet once, but all four finished alive. The party used 10 High Potions, 11 High Mana Potions, three Revival Waters and 12 Remedies. Replacing them at Snowbell would cost 15,602 G. Directional inputs were assisted. If your supplies are low, do the arena branch first and come back.
+
+</details>
+
+#### Find the portal again for materials {#portal-repeat}
+
+After each win, the portal can move to one of the four world-map regions around **Dhalium, Lemuria, Balora or Regull Port**. It still moves after you hand in the King's quest. Only the first fight gives the recipe; later wins still give **Dark Matter ×1, Mythril Crystal ×2, Mythril Bar ×5 and Light Essence ×10**, among other loot.
+
+The portal is a level-60 fight. It doesn't heal your party when you enter, and you can't flee, so save and heal first. Alpha's Bond and Omega's Wish need **40 Light Essence** between them. After the ten from your first win, you can buy the other 30 in Snowbell Village for **1,800 G**, at **60 G each**. The same shop sells **Mythril Ore** if you're a little short. If you use [Quest Assist](journey.qmd#quest-assist), choose the wandering portal in the **H** panel with **Tab** to follow its current location.
+
+#### Enter the Battle Arena Special Challenge {#special-challenge}
+
+Speak to the clerk in the middle of the **Lemuria Battle Arena** lobby. Once the quest is in your journal, pick the third option, **Special Challenge - Fee 900G**. You don't need to win any other challenge first. If you lose, register again; the other challenge tiers earn medals but do not clear this branch. Defeat **Behemoth, Chimera and Sea Demon** together to earn **400 Arena Medals** and clear this branch. See the [fight details](exploration.qmd#arena-special).
+
+#### What to buy with your medals {#late-medals}
+
+The merchant on the right side of the lobby stocks these as soon as you accept the quest:
+
+| Weapon | Purchase | Cost |
+| --- | --- | ---: |
+| Loyal Link | Loyal Link Recipe | 750 medals |
+| Alpha's Bond or Omega's Wish | Adamantite (one per weapon) | 900 medals each |
+
+One Special Challenge pays 400 medals, short of either price. Use the [entry fee and medal tables](exploration.qmd#arena-medals) to make up the difference, then return to the [Medal Shop](exploration.qmd#arena-shop). You can hand in the quest without making a purchase.
+
+::: {.relation}
+After both quests are finished, return to Snowbell Village to [rest and see the optional scene](memories.qmd#third-scene).
+:::
+
+[Arena and Medal Shop](exploration.qmd#arena) · [Ultimate weapons](equipment.qmd#ultimate) · [Scenes and replay](memories.qmd#ending)
+

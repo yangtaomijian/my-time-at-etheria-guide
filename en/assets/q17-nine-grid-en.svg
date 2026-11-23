@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="328" viewBox="0 0 320 328" role="img" aria-labelledby="title desc">
+<title id="title">Nine-grid puzzle</title>
+<desc id="desc">Starting layout: use the four corners and center once.</desc>
+<rect x="1" y="1" width="318" height="326" rx="12" fill="#faf8f2" stroke="#d6d0c2"/>
+<g font-family="system-ui, sans-serif" text-anchor="middle">
+<text x="160" y="30" font-size="18" fill="#3a3730">Nine-grid puzzle</text>
+<rect x="24" y="50" width="80" height="62" rx="7" fill="#f0dca7" stroke="#92723c"/>
+<text x="64" y="75" font-size="17" fill="#3a3730">Top left</text>
+<text x="64" y="98" font-size="15" fill="#615d54">Press</text>
+<rect x="120" y="50" width="80" height="62" rx="7" fill="#e6e8e9" stroke="#a7acae"/>
+<text x="160" y="75" font-size="17" fill="#3a3730">Top center</text>
+<text x="160" y="98" font-size="15" fill="#615d54">Skip</text>
+<rect x="216" y="50" width="80" height="62" rx="7" fill="#f0dca7" stroke="#92723c"/>
+<text x="256" y="75" font-size="17" fill="#3a3730">Top right</text>
+<text x="256" y="98" font-size="15" fill="#615d54">Press</text>
+<rect x="24" y="128" width="80" height="62" rx="7" fill="#e6e8e9" stroke="#a7acae"/>
+<text x="64" y="153" font-size="17" fill="#3a3730">Middle left</text>
+<text x="64" y="176" font-size="15" fill="#615d54">Skip</text>
+<rect x="120" y="128" width="80" height="62" rx="7" fill="#f0dca7" stroke="#92723c"/>
+<text x="160" y="153" font-size="17" fill="#3a3730">Center</text>
+<text x="160" y="176" font-size="15" fill="#615d54">Press</text>
+<rect x="216" y="128" width="80" height="62" rx="7" fill="#e6e8e9" stroke="#a7acae"/>
+<text x="256" y="153" font-size="17" fill="#3a3730">Middle right</text>
+<text x="256" y="176" font-size="15" fill="#615d54">Skip</text>
+<rect x="24" y="206" width="80" height="62" rx="7" fill="#f0dca7" stroke="#92723c"/>
+<text x="64" y="231" font-size="17" fill="#3a3730">Bottom left</text>
+<text x="64" y="254" font-size="15" fill="#615d54">Press</text>
+<rect x="120" y="206" width="80" height="62" rx="7" fill="#e6e8e9" stroke="#a7acae"/>
+<text x="160" y="231" font-size="17" fill="#3a3730">Bottom center</text>
+<text x="160" y="254" font-size="15" fill="#615d54">Skip</text>
+<rect x="216" y="206" width="80" height="62" rx="7" fill="#f0dca7" stroke="#92723c"/>
+<text x="256" y="231" font-size="17" fill="#3a3730">Bottom right</text>
+<text x="256" y="254" font-size="15" fill="#615d54">Press</text>
+<text x="160" y="302" font-size="15" fill="#615d54">Use only on a fresh board</text>
+</g></svg>

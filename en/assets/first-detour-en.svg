@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title"><title id="title">First-cart landing: south, west, north; direct west is blocked</title>
+<rect width="320" height="320" rx="10" fill="#f5f8f9"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#295d73" stroke-width="2"/></marker></defs>
+<text x="30" y="29" text-anchor="start" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">N ↑</text>
+<path data-from="landing" data-to="south" d="M254 130V252" fill="none" stroke="#295d73" stroke-width="3" marker-end="url(#arrow)"/>
+<path data-from="south" data-to="west" d="M254 252H68" fill="none" stroke="#295d73" stroke-width="3" marker-end="url(#arrow)"/>
+<path data-from="west" data-to="north-exit" d="M68 252V130" fill="none" stroke="#295d73" stroke-width="3" marker-end="url(#arrow)"/>
+<path data-blocked="landing-to-west" d="M198 100H121" stroke="#8d6670" stroke-width="2" stroke-dasharray="5 4"/><path d="M151 88L171 112M171 88L151 112" stroke="#8d6670" stroke-width="3"/>
+<g data-node="landing"><rect x="198" y="76" width="110" height="54" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2"/>
+<text x="253.0" y="108.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">Landing</text>
+</g>
+<g data-node="north-exit"><rect x="12" y="76" width="110" height="54" rx="7" fill="#fff" stroke="#9ab8c4" stroke-width="2"/>
+<text x="67.0" y="108.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">North exit</text>
+</g>
+<text x="271" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">1 S</text>
+<text x="162" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">2 W around rock</text>
+<text x="44" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">3 N</text>
+<text x="162" y="151" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#24303a" stroke="#f5f8f9" stroke-width="4" paint-order="stroke">No direct west</text>
+</svg>

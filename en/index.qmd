@@ -1,0 +1,99 @@
+---
+title: My Time at Etheria
+pagetitle: "My Time at Etheria Walkthrough (Official FINAL)"
+subtitle: Official FINAL walkthrough
+description: "My Time at Etheria walkthrough for Official FINAL, with main quests Q1–17, puzzles, side quests, arena, crafting, and how to unlock all three memories."
+toc: false
+page-layout: full
+---
+
+::: {.lead}
+Stuck? Find the next step by quest, location, or puzzle. The guide covers **Official FINAL**, from the opening quests through the ending.
+:::
+
+```{=html}
+<nav class="section-menu" aria-label="Guide sections">
+<a class="section-entry" href="journey.html"><span class="section-num">01</span><span><span class="section-label">Walkthrough &amp; Puzzles</span><span class="section-description">Find the next step by quest or location, and check for nearby side quests.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="quests.html"><span class="section-num">02</span><span><span class="section-label">Side Quests</span><span class="section-description">See what you can pick up now and when to come back for the reward.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="exploration.html"><span class="section-num">03</span><span><span class="section-label">Realms &amp; Arena</span><span class="section-description">Four forgotten realms, Ancient Spirits, arena entry, and the medal shop.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="equipment.html"><span class="section-num">04</span><span><span class="section-label">Equipment &amp; Crafting</span><span class="section-description">Weapons, armor, materials, Soulstones, cores, and food.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="memories.html"><span class="section-num">05</span><span><span class="section-label">Story &amp; Memories</span><span class="section-description">Snowbell's third scene, all three memories, and what to do after the ending.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+</nav>
+```
+
+## Find the next step {#find-next}
+
+- **By quest:** [Opening and new home, Q1–10](journey.html#journey-group-start) · [Across the mainland, Q11–14](journey.html#journey-group-travel) · [Voyage and finale, Q15–17](journey.html#journey-group-finale)
+- **By location:** [Castle lobby](#castle-help) · [Femura mine](#mine-help) · [Regull Port](#port-help)
+
+### Lemuria Castle lobby {#castle-help}
+
+- **Haven't seen the King yet:** [Find out whom to speak to](journey.qmd#castle-audience).
+- **Have the Blue House Key, but no new quest:** [Find Clyde after the audience](journey.qmd#lemuria-next).
+- **Already on Our New Home:** [Find the house](journey.qmd#visit-new-home).
+
+### Femura mine {#mine-help}
+
+- **Haven't ridden a cart yet:** [Check the first four Wheel locations](journey.qmd#four-wheels-cart).
+- **Already rode the first cart and are by the ore piles:** [Find the second set of Wheels](journey.qmd#second-cart).
+
+### Regull Port {#port-help}
+
+- **The residents aren’t talking about passage:** [Start asking about passage](journey.qmd#regull-arrival).
+- **Talked to all four residents, but still can't sail:** [Pick up the captain's assignment](journey.qmd#emerald-next).
+- **Won a Behemoth fight but didn't get a Claw:** [Find another Behemoth](journey.qmd#behemoth-proof).
+- **Have a Claw already:** [Return to the captain](journey.qmd#behemoth-voyage).
+
+### Other common roadblocks {#more-stuck}
+
+- [Can't find Gali Root for the household's Fried Meat](journey.qmd#home-cooking).
+- [Reached Fort Aridale, but the journal still says Our New Home](journey.qmd#fort-aridale-handoff).
+- [Won the Redsea ruins altar fight, but Q11 is still open](journey.qmd#redsea-altar).
+- [Artellus's west exit is sending you back to the inn](journey.qmd#artellus-next).
+
+## Choose a side goal {#goals}
+
+:::: {.goal-grid}
+::: {.goal-card}
+::: {.goal-tag}
+Equipment
+:::
+### Craft an ultimate weapon
+
+Choose between Alpha's Bond, Omega's Wish, Loyal Link, and Wishing Star before spending your Mythril.
+
+[See where to get all four](equipment.qmd#ultimate)
+:::
+::: {.goal-card}
+::: {.goal-tag}
+Exploration and battles
+:::
+### Try a realm or the arena
+
+The four elemental realms award different core recipes. Arena challenges earn medals you can spend in the shop.
+
+[See realm routes and arena challenges](exploration.qmd)
+:::
+::: {.goal-card}
+::: {.goal-tag}
+Extra story
+:::
+### Unlock the third memory
+
+Two late side quests unlock the extra Snowbell scene. Play that scene before trying to replay it as a memory.
+
+[Check the scene and replay requirements](memories.qmd#third-scene)
+:::
+::::
+
+## How the late-game goals connect {#connections}
+
+::: {.relation}
+Union Link leads to the Omega's Wish recipe and the extra scene. The King's Request opens the expanded medal shop and the Darkspore Portal branch, which awards the Wishing Star Recipe. You also need it for the extra scene.
+:::
+
+::: {.quick-links}
+[Two late side quests](quests.qmd#late) · [Arena shop](exploration.qmd#arena-shop) · [Crafting materials](equipment.qmd#materials) · [Scene requirements](memories.qmd#third-scene)
+:::
+
+New to the game? Start with [the quest journal](journey.qmd#basics). If you have Quest Assist installed, see [how to use H, N, and Tab](journey.qmd#quest-assist).

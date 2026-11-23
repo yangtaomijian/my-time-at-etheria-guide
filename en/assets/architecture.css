@@ -1,0 +1,210 @@
+/* Content arrangements only. Shared reading assets own typography and controls. */
+#quarto-document-content .lead{font-size:1rem;font-weight:400}
+.preview-note{font-size:.82rem;color:var(--kt-text-muted);padding:.65rem .85rem;border-left:2px solid var(--kt-border-strong);background:var(--kt-surface-panel);margin-bottom:1.4rem}
+.section-menu{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--kt-border-strong)}
+#quarto-document-content a.section-entry[href]{display:grid;grid-template-columns:2.2rem 1fr 1.2rem;gap:.6rem;align-items:start;padding:1.15rem 1.2rem 1.15rem 0;border-bottom:1px solid var(--kt-border);color:var(--kt-text);text-decoration:none;min-width:0}
+#quarto-document-content a.section-entry:nth-child(even){padding-left:1.1rem;border-left:1px solid var(--kt-border)}
+#quarto-document-content a.section-entry:last-child{grid-column:1/-1;border-left:0;padding-left:0}
+#quarto-document-content a.section-entry:hover{background:var(--kt-surface-muted)}
+.section-num{font-family:var(--kt-font-editorial);font-size:1.45rem;line-height:1.2;color:var(--kt-accent)}
+.section-label{display:block;font-size:1.17rem;line-height:1.4;font-weight:680;color:var(--kt-heading);margin-bottom:.3rem}
+.section-description{display:block;color:var(--kt-text-muted);font-size:.91rem;line-height:1.65}
+.entry-arrow{color:var(--kt-accent);font-size:1.1rem}
+.goal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin:1rem 0}
+.goal-card{border-top:2px solid var(--kt-accent);padding:1rem 0;background:transparent;min-width:0}
+.goal-card h3{margin-top:0;font-size:1.12rem}
+.goal-card p{font-size:.92rem;color:var(--kt-text-muted);line-height:1.65}
+.goal-tag,.eyebrow{font-size:.75rem;font-weight:650;letter-spacing:.04em;color:var(--kt-accent);margin-bottom:.45rem}
+.quick-links{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;margin:1.1rem 0 1.7rem}
+.quick-links a{font-size:.92rem;min-height:44px;display:inline-flex;align-items:center}
+.reading-rule{background:var(--kt-surface-muted);padding:1rem 1.1rem;border-radius:var(--kt-radius-sm);margin:1.3rem 0;line-height:1.7}
+.reading-rule p:last-child{margin-bottom:0}
+.chapter-scope{color:var(--kt-text-muted);font-size:.92rem}
+.related{font-size:.9rem;color:var(--kt-text-muted);padding-top:.45rem}
+.two-paths{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-block:1rem}
+.path{padding:.9rem 1rem;border:1px solid var(--kt-border);background:var(--kt-surface);border-radius:var(--kt-radius-sm)}
+.path h3{margin-top:0}
+.path p:last-child{margin-bottom:0}
+.route-steps{padding-left:1.35rem}
+.route-steps li{margin-bottom:.65rem}
+.relation{margin-block:1rem;border-left:3px solid var(--kt-accent);padding:.65rem 1rem;background:var(--kt-surface-panel)}
+.relation p:last-child{margin-bottom:0}
+.map-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.map-group{border-top:1px solid var(--kt-border-strong);padding-top:.8rem}
+.map-group h2,.map-group h3{margin-top:0}
+.map-group ul{padding-left:1.2rem;font-size:.95rem}
+.map-group li{margin-bottom:.45rem}
+.principles{font-size:.95rem}
+.chapter-index{columns:2;column-gap:2rem;padding-left:1.2rem;font-size:.93rem}
+.chapter-index li{break-inside:avoid;min-height:36px;padding-block:.15rem}
+.journey-stage-picker{margin:1.4rem 0 2rem}
+.journey-stage-group{border-top:1px solid var(--kt-border-strong);padding:.25rem 0 .8rem}
+.journey-stage-group>summary{font-weight:650;font-size:1.05rem;cursor:pointer;min-height:48px;padding:.65rem .1rem}
+.journey-stage-group>summary>span{display:inline-block;color:var(--kt-text-muted);font-size:.84rem;font-weight:400;margin-left:.7rem}
+.journey-stage-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.55rem;margin:.45rem 0 1rem}
+#quarto-document-content a.journey-stage-card{display:flex;gap:.55rem;align-items:flex-start;min-height:88px;padding:.8rem .65rem;border:1px solid var(--kt-border);border-radius:var(--kt-radius-sm);background:var(--kt-surface);color:var(--kt-text);text-decoration:none}
+#quarto-document-content a.journey-stage-card:hover,#quarto-document-content a.journey-stage-card[aria-current]{border-color:var(--kt-accent);background:var(--kt-surface-muted)}
+#quarto-document-content a.journey-stage-card[aria-current]{box-shadow:inset 0 -2px var(--kt-accent)}
+.journey-stage-number{font-family:var(--kt-font-editorial);font-size:1.25rem;color:var(--kt-accent);line-height:1.3}
+.journey-stage-card strong{display:block;font-size:.91rem;font-weight:650;line-height:1.5}
+.journey-stage-card small{display:block;font-size:.75rem;color:var(--kt-text-muted);line-height:1.5;margin-top:.3rem}
+.journey-stage-panel{padding:.2rem 0 1rem}
+.journey-stage-panel[hidden]{display:none!important}
+.journey-stage-panel>h2{margin-top:1rem}
+.journey-stage-card:focus-visible,.journey-stage-group>summary:focus-visible{outline:2px solid var(--kt-accent);outline-offset:3px}
+@media(max-width:767px){.journey-stage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.journey-stage-group>summary>span{display:block;margin:.2rem 0 0 1.1rem}.journey-stage-number{font-size:1.12rem}#quarto-document-content a.journey-stage-card{padding:.7rem .5rem}.journey-stage-card strong{font-size:.87rem}}
+@media(max-width:767px){.section-menu{grid-template-columns:1fr}#quarto-document-content a.section-entry:nth-child(even){padding-left:0;border-left:0}#quarto-document-content a.section-entry:last-child{grid-column:auto}.goal-grid,.map-grid,.two-paths{grid-template-columns:1fr;gap:.8rem}.goal-card{padding-top:.8rem}.chapter-index{columns:1}.section-label{font-size:1.1rem}}
+
+/* Previous and next story stage cards; the first and last retain direction. */
+.journey-stage-pager{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin-top:1rem}
+.journey-stage-page-link{display:flex;flex-direction:column;justify-content:center;gap:.1rem;min-height:52px;min-width:0;padding:.65rem .8rem;border:1px solid var(--kt-border);border-radius:var(--kt-radius-sm);background:var(--kt-surface);color:var(--kt-accent);text-decoration:none;overflow-wrap:anywhere}
+.journey-stage-page-link span{font-size:.8rem}
+.journey-stage-page-link:hover,.journey-stage-page-link:focus-visible{border-color:var(--kt-accent)}
+.journey-stage-page-link:focus-visible{outline:2px solid var(--kt-accent);outline-offset:2px}
+.journey-stage-page-previous{grid-column:1;grid-row:1}
+.journey-stage-page-next{grid-column:2;grid-row:1;text-align:right}
+@media(max-width:480px){.journey-stage-pager{gap:.45rem}.journey-stage-page-link{padding:.55rem .6rem}}
+.journey-stage-list-link{grid-column:1/-1;justify-self:center;display:grid;place-items:center;min-height:44px;padding:.25rem .65rem;font-size:.86rem;color:var(--kt-accent)}
+.journey-stage-list-link:focus-visible{outline:2px solid var(--kt-accent);outline-offset:2px}
+
+/* Etheria only: preserve side-by-side comparison in compact mobile tables. */
+@media(max-width: 720px){
+  #quarto-document-content .etheria-table-compact{min-width:0;max-width:100%}
+  #quarto-document-content .etheria-table-compact > table.table{width:100%;max-width:100%;font-size:.86rem}
+  #quarto-document-content .etheria-table-compact > table.table :is(th,td){white-space:normal;overflow-wrap:anywhere;word-break:normal;padding:.32rem .34rem;line-height:1.35;vertical-align:top;min-width:0}
+  #quarto-document-content .etheria-table-numeric > table.table{table-layout:fixed;font-variant-numeric:tabular-nums}
+  #quarto-document-content .etheria-table-numeric :is(th,td):first-child{width:37%;text-align:start}
+  #quarto-document-content .etheria-table-numeric :is(th,td):not(:first-child){text-align:center!important}
+  #quarto-document-content .etheria-table.kt-record-mode > table.table > tbody > tr{padding:.48rem 0}
+  #quarto-document-content .etheria-table.kt-record-mode > table.table > tbody > tr > td{padding:.18rem 0!important;text-align:start!important;line-height:1.42}
+  #quarto-document-content .etheria-table.kt-record-mode > table.table > tbody > tr > td:first-child .kt-record-label{display:none}
+  #quarto-document-content .etheria-table.kt-record-mode > table.table > tbody > tr > td .kt-record-label{margin-bottom:.02rem}
+}
+
+/* Number and move scan as the step heading; the instruction gets the full line. */
+@media(max-width:720px){
+  #quarto-document-content .etheria-table-sequence > table.table,
+  #quarto-document-content .etheria-table-sequence > table.table > tbody{display:block;width:100%;min-width:0}
+  #quarto-document-content .etheria-table-sequence > table.table > colgroup{display:none}
+  #quarto-document-content .etheria-table-sequence > table.table > thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  #quarto-document-content .etheria-table-sequence > table.table > tbody > tr{display:grid;grid-template-columns:2rem minmax(0,1fr);align-items:baseline;column-gap:.35rem;padding:.42rem .1rem;border-top:1px solid var(--kt-border)}
+  #quarto-document-content .etheria-table-sequence > table.table > tbody > tr > td{display:block;min-width:0;padding:.07rem .12rem;border:0;background:transparent;text-align:start!important;font-size:.92rem;line-height:1.45;overflow-wrap:anywhere}
+  #quarto-document-content .etheria-table-sequence td:first-child{color:var(--kt-accent);font-weight:700;font-variant-numeric:tabular-nums}
+  #quarto-document-content .etheria-table-sequence td:nth-child(2){font-weight:650}
+  #quarto-document-content .etheria-table-sequence > table.table > tbody > tr > td:nth-child(3){grid-column:1 / -1}
+}
+
+/* A small number column keeps the route or position text readable on phones. */
+@media(max-width:720px){
+  #quarto-document-content .etheria-table-ordinal > table.table{table-layout:fixed}
+  #quarto-document-content .etheria-table-ordinal > table.table > colgroup{display:none}
+  #quarto-document-content .etheria-table-ordinal > table.table > thead > tr > th:first-child{width:3.05rem;text-align:center}
+  html[lang=zh-Hans] #quarto-document-content .etheria-table-ordinal > table.table > thead > tr > th:first-child{width:2.55rem}
+  #quarto-document-content .etheria-table-ordinal > table.table > tbody > tr > td:first-child{text-align:center!important;font-variant-numeric:tabular-nums}
+  #quarto-document-content .etheria-table-ordinal-3 > table.table > thead > tr > th:nth-child(2){width:30%}
+}
+
+/* Short fields on these quest comparisons leave space for the field with instructions. */
+@media(max-width:720px){
+  #quarto-document-content :is(.etheria-table-quest-materials,.etheria-table-quest-messenger,.etheria-table-quest-forms) > table.table{table-layout:fixed}
+  #quarto-document-content :is(.etheria-table-quest-materials,.etheria-table-quest-messenger,.etheria-table-quest-forms) > table.table > colgroup{display:none}
+  #quarto-document-content .etheria-table-quest-materials > table.table > thead > tr > th:first-child{width:28%}
+  #quarto-document-content .etheria-table-quest-materials > table.table > thead > tr > th:nth-child(2){width:17%}
+  #quarto-document-content .etheria-table-quest-materials > table.table :is(th,td):nth-child(2){text-align:center!important}
+  #quarto-document-content .etheria-table-quest-messenger > table.table > thead > tr > th:first-child{width:24%}
+  #quarto-document-content .etheria-table-quest-messenger > table.table > thead > tr > th:nth-child(2){width:48%}
+  #quarto-document-content .etheria-table-quest-forms > table.table > thead > tr > th:first-child{width:27%}
+  #quarto-document-content .etheria-table-quest-forms > table.table > thead > tr > th:nth-child(2){width:25%}
+}
+
+/* Realm and arena facts read inline; longer descriptions still wrap normally. */
+@media(max-width:720px){
+  #quarto-document-content .etheria-exploration-record.kt-record-mode > table.table > tbody > tr{padding:.43rem 0}
+  #quarto-document-content .etheria-exploration-record.kt-record-mode > table.table > tbody > tr > td:not(:first-child){padding:.12rem 0!important}
+  #quarto-document-content .etheria-exploration-record.kt-record-mode > table.table > tbody > tr > td:not(:first-child) .kt-record-label{display:inline;line-height:inherit;letter-spacing:0}
+  #quarto-document-content .etheria-exploration-record.kt-record-mode > table.table > tbody > tr > td:not(:first-child) .kt-record-label::after{content:" · ";white-space:pre}
+}
+
+/* Preserve compact comparisons in the puzzle and shop tables. */
+@media(max-width:720px){
+  #quarto-document-content .etheria-exploration-table-water > table.table > thead > tr > th:nth-child(2){width:3.8rem}
+  html[lang=zh-Hans] #quarto-document-content .etheria-exploration-table-water > table.table > thead > tr > th:nth-child(2){width:2.55rem}
+  #quarto-document-content .etheria-exploration-table-water > table.table :is(th,td):nth-child(2){text-align:center}
+  #quarto-document-content :is(.etheria-exploration-table-fire,.etheria-exploration-table-shop,.etheria-exploration-table-shop-en) > table.table{table-layout:fixed}
+  #quarto-document-content :is(.etheria-exploration-table-fire,.etheria-exploration-table-shop,.etheria-exploration-table-shop-en) > table.table > colgroup{display:none}
+  #quarto-document-content .etheria-exploration-table-fire > table.table > thead > tr > th:first-child{width:19%}
+  #quarto-document-content .etheria-exploration-table-fire > table.table > thead > tr > th:nth-child(2){width:33%}
+  #quarto-document-content .etheria-exploration-table-shop > table.table > thead > tr > th:first-child{width:27%}
+  #quarto-document-content .etheria-exploration-table-shop > table.table > thead > tr > th:nth-child(2){width:20%}
+  #quarto-document-content .etheria-exploration-table-shop > table.table :is(th,td):nth-child(2){text-align:center}
+  #quarto-document-content .etheria-exploration-table-shop-en > table.table > thead > tr > th:first-child{width:31%}
+  #quarto-document-content .etheria-exploration-table-shop-en > table.table > thead > tr > th:nth-child(3){width:3.65rem}
+}
+
+@media(max-width:720px){
+  #quarto-document-content .etheria-exploration-table-fire-en > table.table{table-layout:fixed}
+  #quarto-document-content .etheria-exploration-table-fire-en > table.table > colgroup{display:none}
+  #quarto-document-content .etheria-exploration-table-fire-en > table.table > thead > tr > th:first-child{width:34%}
+}
+
+/* Equipment disclosure: less space around repeated headings, compact slot facts. */
+@media(max-width:720px){
+  #quarto-document-content details.etheria-equipment-fold[open] > summary{margin-bottom:.28rem}
+  #quarto-document-content details.etheria-equipment-fold[open] > section > :is(h2,h3):first-child{margin-top:.25rem;margin-bottom:.35rem}
+  #quarto-document-content .etheria-equipment-fold :is(#swords,#greatswords,#claws,#jewels,#body-armor,#head-boots,#accessories-shields) .kt-record-mode > table.table > tbody > tr > td:last-child .kt-record-label{display:inline;margin:0;line-height:inherit;letter-spacing:0}
+  #quarto-document-content .etheria-equipment-fold :is(#swords,#greatswords,#claws,#jewels,#body-armor,#head-boots,#accessories-shields) .kt-record-mode > table.table > tbody > tr > td:last-child .kt-record-label::after{content:" · ";white-space:pre}
+}
+
+/* The link-only intro strip is navigation, not a padded note with body copy. */
+#quarto-document-content .preview-note:has(> .etheria-inline-links:only-child){padding-block:.4rem;margin-bottom:.65rem}
+#quarto-document-content .preview-note > .etheria-inline-links:only-child{margin:0}
+#quarto-document-content .kt-ordinary-page > p:has(+ .preview-note > .etheria-inline-links:only-child){margin-bottom:.65rem}
+#quarto-document-content .preview-note:has(> .etheria-inline-links:only-child) + section > h2:first-child{margin-top:1.4rem}
+@media(min-width:768px){
+  #quarto-document-content p.etheria-inline-links:not(.preview-note > p){margin-block:.45rem .65rem}
+}
+
+/* Seven walkthrough comparisons: keep short labels narrow so directions can wrap less. */
+@media(max-width:720px){
+  #quarto-document-content .etheria-journey-columns{--first-col:29%;--second-col:auto;--third-col:auto}
+  #quarto-document-content .etheria-journey-columns-switch{--first-col:31%}
+  #quarto-document-content .etheria-journey-columns-area{--first-col:24%}
+  #quarto-document-content .etheria-journey-columns-recipe{--first-col:28%}
+  #quarto-document-content .etheria-journey-columns-torches{--first-col:35%;--second-col:27%}
+  #quarto-document-content .etheria-journey-columns-room{--first-col:35%}
+  #quarto-document-content .etheria-journey-columns-block{--first-col:25%}
+  #quarto-document-content .etheria-journey-columns-supplies{--first-col:39%;--second-col:18%;--third-col:24%;font-variant-numeric:tabular-nums}
+  #quarto-document-content .etheria-journey-columns > table.table{table-layout:fixed}
+  #quarto-document-content .etheria-journey-columns > table.table > colgroup{display:none}
+  #quarto-document-content .etheria-journey-columns > table.table > thead > tr > th:first-child{width:var(--first-col)}
+  #quarto-document-content .etheria-journey-columns > table.table > thead > tr > th:nth-child(2){width:var(--second-col)}
+  #quarto-document-content .etheria-journey-columns > table.table > thead > tr > th:nth-child(3){width:var(--third-col)}
+}
+
+@media(max-width:720px){
+  #quarto-document-content .etheria-journey-columns-supplies > table.table :is(th,td):first-child{overflow-wrap:normal}
+}
+@media(max-width:352px){
+  #quarto-document-content .etheria-journey-columns-supplies > table.table,
+  #quarto-document-content .etheria-journey-columns-supplies > table.table > :is(thead,tbody){display:block;width:100%}
+  #quarto-document-content .etheria-journey-columns-supplies > table.table > :is(thead,tbody) > tr{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;border-bottom:1px solid var(--kt-border)
+  }
+  #quarto-document-content .etheria-journey-columns-supplies > table.table > :is(thead,tbody) > tr > :is(th,td){
+    display:block;min-width:0;padding:.25rem .38rem;border:0;text-align:center!important
+  }
+  #quarto-document-content .etheria-journey-columns-supplies > table.table > :is(thead,tbody) > tr > :is(th,td):first-child{
+    grid-column:1/-1;width:auto;text-align:start!important;font-weight:650
+  }
+}
+
+/* These two tables have a short numeric field; keep it close to its meaning. */
+@media(max-width:720px){
+  #quarto-document-content #crafting-the-unknown .kt-record-mode > table.table > tbody > tr > td:nth-child(2) .kt-record-label{display:inline;margin:0;line-height:inherit;letter-spacing:0}
+  #quarto-document-content #crafting-the-unknown .kt-record-mode > table.table > tbody > tr > td:nth-child(2) .kt-record-label::after{content:" · ";white-space:pre}
+  #quarto-document-content #sp .etheria-table-compact > table.table{table-layout:fixed}
+  #quarto-document-content #sp .etheria-table-compact > table.table > colgroup{display:none}
+  #quarto-document-content #sp .etheria-table-compact > table.table > thead > tr > th:first-child{width:39%}
+  #quarto-document-content #sp .etheria-table-compact > table.table > thead > tr > th:nth-child(2){width:2.8rem}
+  #quarto-document-content #sp .etheria-table-compact > table.table :is(th,td):nth-child(2){text-align:center!important;font-variant-numeric:tabular-nums}
+}

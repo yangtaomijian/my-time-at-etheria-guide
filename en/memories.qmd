@@ -1,0 +1,55 @@
+---
+title: Scenes and Memories
+description: Unlock Snowbell's extra scene, save after the ending, and replay a scene with the Memory Stone.
+---
+
+Want to see Snowbell's extra scene? Finish the two late-game quests below. If you've already beaten the game and want to watch a scene again, use the **Memory Stone** at a save crystal.
+
+::: {.preview-note}
+[Unlock the third scene](#third-scene) · [Save and replay after the ending](#ending)
+:::
+
+## The three Memories {#memories}
+
+| Menu entry | Scene | Requirement to replay |
+| --- | --- | --- |
+| Memory 1 | The main-story campsite scene in the forest | Have the Memory Stone. |
+| Memory 2 | The main-story scene in your new home | Have the Memory Stone. |
+| Memory 3 | The optional scene in Snowbell Village | See the scene first, then use the Memory Stone. |
+
+### Snowbell Village's third scene {#third-scene}
+
+Once you've [returned to Snowbell in Q16](journey.qmd#arcius-story-return) and watched the scene outside, you can take on these two quests:
+
+1. Finish [Union Link](quests.qmd#union-link): defeat Garet in Elm Village and watch the conversation afterward.
+2. Finish [The King's Request!](quests.qmd#the-kings-request): win both the portal and arena battles, then **report back to the soldier in Regull Port**.
+3. Go back to the house in Snowbell Village where you usually rest. Interact with the rest spot, talk to Garet, and choose **Get some rest**. Stay for the conversation after the scene.
+
+**Getting the usual rest scene?** Make sure you beat Garet, finished both branches of The King's Request! and handed it in. Then check you're in the right house. You can see the scene before the ending without crafting any ultimate weapons.
+
+[Both late-game quests](quests.qmd#late) · [Ultimate weapons](equipment.qmd#ultimate)
+
+#### Learn Synth Soul Breaker {#third-scene-reward}
+
+Watch the scene and the conversation afterward to teach Drey **Synth Soul Breaker**, a four-person ability. Replaying Memory 3 won't teach it again. See [Synth Soul Breaker](equipment.qmd#soul-breaker) for the AP cost and directional inputs. The final battle's scripted finishing move is separate.
+
+### Save and replay after the ending {#ending}
+
+Win the final battle, then watch the credits and epilogue to get the **Memory Stone** if you don't already have it. At the save prompt, choose **Yes**. You return to the crystal in the Fortress of Souls. Select a slot, then choose **Save** on the right. Use a separate slot to keep a save from before the final battle. Choosing **No** returns you to the title screen.
+
+**To continue later:** At the title screen, select **Continue**, choose the completed save and select **Load → Yes**. Wait for the screen to fade in at the fortress crystal, then check your bag for the Memory Stone and your journal for Q17. If the save screen stays open after you save, use **Cancel** to close it.
+
+**To replay a scene:** Face the crystal and choose **Memory Stone**, then **Memory 1**, **Memory 2**, or **Memory 3**. Missing Memory 3? Check that you watched the extra Snowbell scene on this save. Use the **Memory Stone** item, not the **Memory Soulstone** you can equip. When the replay ends, you'll be back at the crystal.
+
+**To revisit towns:** Check your HP, MP and supplies: saving and replaying do not restore them. You can still run into enemies on the way, and trying to flee may fail. Follow the [route south out of the fortress and back to Regull Port](journey.qmd#finale-after-clear). Going north from the crystal takes you into the final battle again. In Regull Port, you can save at the crystal in the tavern: choose **Yes**, select a slot, then select **Save**. If Save is greyed out in the menu, return to the crystal. Saving there costs no lodging fee and does not restore the party.
+
+If you already have a Memory Stone, beating the final battle again may not show the Q17 completion notice a second time.
+
+<details id="postclear-loop-sample">
+<summary>Example: saving, reloading, replaying and returning to port</summary>
+
+In one run, the party kept its items, HP, MP, AP and puzzle progress after reloading the completed save and replaying **Memory 2**. On the way back south, some failed attempts to flee meant using one **High Potion** and one **Purified Water**. The party saved at the Regull Port tavern without fighting the final battle again.
+
+</details>
+
+[Finale walkthrough](journey.qmd#finale) · [Late-game quests](quests.qmd#late)

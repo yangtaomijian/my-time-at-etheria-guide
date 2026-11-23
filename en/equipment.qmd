@@ -1,0 +1,427 @@
+---
+title: Equipment & Crafting
+description: Find recipes and materials, install cores, cook meals and prepare for fights.
+---
+
+Looking for a piece of gear? Start with its recipe. If a spell isn't showing up, check [how to install a core](#core-install). For help surviving heavy hits, see [barriers](#barrier-cores).
+
+## Gear to pick up along the way {#equipment-route}
+
+Choose upgrades for the characters who need them most. If another recipe calls for your old weapon, [keep a spare](#old-weapons).
+
+| Story progress | Useful pickups |
+| --- | --- |
+| Q1–5: opening through Windmill Village | Pick up recipes for the Bronze Sword, Wooden and Bronze Greatswords, Claws and Iron Claws. |
+| Q6–11: Lemuria and the new home | The market materials stall sells armor recipes and cloth. Nearby camps have the Iron Greatsword, Swift Claws and Iron Jewel recipes. Use the new home's kitchen to make [food for the road](#food-use). |
+| Q12–14: Balora to Regull Port | Look for bars, the Lucky Bracelet and armor with more slots. Get the Claymore recipe on Paradise Isle, then the Chimera Claymore recipe in the canyons. Bring a Simple Blade if you plan to make the Ancient Blade. |
+| Q15–16: Infested Cave to Arcius | Pick up the Vibrant Jewel recipe in the deep cave and mine Diamond and Mythril Ore. Keep extra claws and horns for Beastly Claws. Snowbell Village has supplies and late armor recipes. |
+| Before the ending | Plan which of the [four ultimate weapons](#ultimate) you want first. Save Mythril Crystals for those or for armor. |
+
+## Weapons and upgrades {#weapon-index}
+
+Drey uses swords, Garet greatswords, Lex claws and Su jewels. The AP column shows how much extra AP the weapon adds to normal attacks. A weapon slot can't hold a Magic Core.
+
+### Drey: swords {#swords}
+
+| Equipment | Recipe location | Materials per item | Attack AP bonus / weapon slots |
+| --- | --- | --- | --- |
+| Wooden Sword | North side of the second forest area (Q1). | Wooden Hilt×1, Wood×1 | +1 / 0 |
+| Bronze Sword | On the north side of the main route through Fara Mountain (Q2). | **Wooden Sword×1**, Bronze Hilt×1, Stone×1 | +3 / 1 |
+| Blunt Sword | North side of the [thieves’ hideout](journey.qmd#hideout-gates) (Q4). | **Wooden Sword×1**, Iron Ore×3, Stone×5 | +4 / 1 |
+| Iron Sword | North side of a house in the Lemuria slums (Q6 onward). | Iron Hilt×1, Iron Bar×3, Fire Essence×5 | +5 / 3 |
+| Simple Blade | North side of a house in [Artellus Town](journey.qmd#artellus) (Q13). | Iron Hilt×1, Iron Bar×5, Gold Bar×2, Earth Shard×5 | +8 / 0 |
+| Ancient Blade | North end of the stump in [Emerald Garden](journey.qmd#emerald) (Q14). | **Simple Blade×1**, Gold Bar×5, Diamond Ore×5, Mythril Ore×5 | +8 / 2 |
+| Alpha's Bond | [Orb past the four knight trials](#alpha-bond), after the Q16 rescue. | Fire Gem×5, Light Essence×20, Mythril Crystal×1, Adamantite×1 | +10 / 5 |
+
+The Iron Sword has three slots and the Ancient Blade has two. Save a Simple Blade for the upgrade even though it has no slots of its own.
+
+### Garet: greatswords {#greatswords}
+
+| Equipment | Recipe location | Materials per item | Attack AP bonus / weapon slots |
+| --- | --- | --- | --- |
+| Wooden Greatsword | East side of the Fara Mountain campsite (Q2). | Wooden Hilt×1, Stone×1, Wood×1 | +1 / 0 |
+| Bronze Greatsword | Northeast of [Sunkurst Farm](journey.qmd#dhalium) (Q3). | **Wooden Greatsword×1**, Stone×4, Bronze Ore×4 | +3 / 1 |
+| Iron Greatsword | Northwest corner of the camp east of Windmill Village and northwest of Lemuria (Q5 onward). | Iron Hilt×1, Bronze Ore×5, Iron Bar×3 | +4 / 2 |
+| Claymore | East of the [Paradise Isle inn](journey.qmd#femura) (Q12). | Iron Hilt×1, Iron Bar×4, Gold Bar×3 | +6 / 0 |
+| Chimera Claymore | North end of the main path through [the canyons](journey.qmd#artellus) (Q13). | **Claymore×1**, Diamond Bar×1, Fire Shard×5, Chimera Fang×1 | +7 / 3 |
+| Omega's Wish | [Defeat Garet in Union Link](#omegas-wish), late game. | Earth Gem×5, Light Essence×20, Mythril Crystal×1, Adamantite×1 | +10 / 5 |
+
+If you can, make a Claymore before heading into the canyons. The Chimera Claymore recipe uses both that finished Claymore and a Chimera Fang.
+
+### Lex: claws {#claws}
+
+| Equipment | Recipe location | Materials per item | Attack AP bonus / weapon slots |
+| --- | --- | --- | --- |
+| Claws | Outdoors in eastern Dhalium Town (Q3). | Stone×2, Bronze Ore×2 | +1 / 0 |
+| Iron Claws | Southwest of Windmill Village (Q5). | **Claws×1**, Iron Ore×5 | +3 / 2 |
+| Swift Claws | East side of the camp southeast of Lemuria (Q6 onward). | Bronze Bar×1, Wind Essence×3 | +4 / 2 |
+| Monster Claws | South side of the altar area in the [Redsea Ruins](journey.qmd#redsea) (Q11). | Roc Bird Claw×2, Minotaur Horn×2, Monster Stone×2, Wind Essence×5 | +5 / 2 |
+| Serrated Claws | East of the first area in the [Abandoned Mine](journey.qmd#femura) (Q12). | Bronze Bar×1, Iron Bar×3, Gold Bar×4, Wind Shard×5 | +6 / 3 |
+| Beastly Claws | On the north side of a house in western [Regull Port](journey.qmd#emerald) (Q14). | **Claws×1**, Behemoth Claw×3, Behemoth Horn×3, Mythril Ore×5 | +7 / 4 |
+| Loyal Link | [Medal Shop after accepting the King’s request](#loyal-link), 750 medals. | Wind Gem×5, Red Halo×10, Mythril Crystal×1, Dark Matter×1 | +10 / 5 |
+
+Beastly Claws require three claws and three horns from Behemoths. See [where to get more](#behemoth-materials), and keep one set of basic Claws for the recipe.
+
+### Su: jewels {#jewels}
+
+| Equipment | Recipe location | Materials per item | Attack AP bonus / weapon slots |
+| --- | --- | --- | --- |
+| Green Jewel | Near the eastern end of the eastern section of Lumbly Bridge (Q5). | Green Goo×3, Monster Stone×5 | +1 / 1 |
+| Bronze Jewel | Beyond the [old arena door](exploration.qmd#arena-passage) (after the Q6 audience). | Bronze Bar×3, Monster Stone×10, Fire Essence×5, Wind Essence×5 | +2 / 1 |
+| Iron Jewel | Northeast of the camp southwest of Lemuria (Q7–11). | Iron Bar×4, Monster Stone×20, Earth Shard×5, Water Shard×5 | +4 / 1 |
+| Elemental Jewel | East side of the camp between Balora and Paradise Isle (Q12 onward). | Fire Stone×1, Water Stone×1, Earth Stone×1, Wind Stone×1 | +6 / 2 |
+| Vibrant Jewel | North of the [deep Infested Cave](journey.qmd#infested-boots) (Q15). | Gold Bar×2, Diamond Ore×5, Mythril Ore×5 | +7 / 3 |
+| Wishing Star | [First portal reward](#wishing-star), late game. | Water Gem×5, Red Halo×10, Mythril Crystal×1, Orichalcum×1 | +10 / 4 |
+
+For spells such as Gale or Bubble, give Su armor or an accessory with a Magic Core slot. Jewel slots take weapon cores.
+
+### Save these weapons for upgrades {#old-weapons}
+
+| Upgrade | Weapon consumed |
+| --- | --- |
+| Bronze Sword or Blunt Sword | One Wooden Sword per upgrade. |
+| Bronze Greatsword | One Wooden Greatsword. |
+| Iron Claws or Beastly Claws | One set of basic Claws per upgrade. |
+| Ancient Blade | One Simple Blade. |
+| Chimera Claymore | One Claymore. |
+
+Equipped weapons don't count toward a recipe. Swap to a spare to put the old weapon back in your inventory before crafting.
+
+## Armor, shields and accessories {#armor-index}
+
+Use **Synthesize → Craft Armor**. Crafting takes the listed materials but no Gold, and you keep the recipe. When choosing gear for a spellcaster, check the number of Magic Core slots.
+
+### Body armor and robes {#body-armor}
+
+| Equipment | Recipe location | Materials per item | Magic Core slots |
+| --- | --- | --- | --- |
+| Cotton Warmers | Dhalium armor shop or Lemuria market (Q3 onward). | Cotton×5 | 1 |
+| Leather Armor | Dhalium armor shop or Lemuria market (Q3 onward). | Leather×5 | 1 |
+| Bronze Vest | Windmill Village Item Store or Lemuria market (Q5 onward). | Bronze Ore×5, Cotton×2, Leather×1 | 2 |
+| Sturdy Armor | Lemuria market materials stall (Q6 onward). | Iron Ore×5, Wool×2 | 1 |
+| Gold Plated Armor | Artellus arms and armor shop or Regull Port stall (Q13 onward). | Gold Bar×2, Iron Bar×1, Diamond Ore×5 | 2 |
+| Knight's Armor | Regull Port stall (Q14). | Iron Bar×2, Gold Bar×2, Diamond Bar×3, Mythril Ore×5 | 3 |
+| Ancient Armor | Merchant in the Snowbell Village house with the father and son, after the Q16 rescue. | Diamond Crystal×2, Mythril Crystal×2, Dark Essence×20, Light Essence×10 | 4 |
+| Silk Robe | Lemuria market materials stall (Q6 onward). | Silk×5, Rope×1 | 2 |
+| Battle Robe | Lemuria market materials stall or several armor shops later on (Q6 onward). | Wool×3, Silk×3, Cotton×3, Rope×1 | 2 |
+| Mage's Mantle | Balora armor shop (Q12 onward). | Silk×8, Fire Essence×3, Water Essence×3, Earth Essence×3, Wind Essence×3 | 3 |
+| Magician's Robe | Artellus arms and armor shop or Regull Port stall (Q13 onward). | Silk×12, Cotton×10, Wool×12, Diamond Bar×1 | 4 |
+| Wizard's Robe | Regull Port stall or Snowbell Village merchant (Q14 onward). | Mythril Crystal×2, Fire Gem×1, Water Gem×1, Earth Gem×1, Wind Gem×1 | 5 |
+
+Wizard's Robe and Ancient Armor each take two Mythril Crystals, which you may want for an ultimate weapon instead.
+
+### Headgear and boots {#head-boots}
+
+| Equipment | Recipe location | Materials per item | Magic Core slots |
+| --- | --- | --- | --- |
+| Straw Hat | Elm Village or Dhalium shop (Q1 onward). | Straws×10 | 0 |
+| Feathered Hat | Windmill Village Item Store or Lemuria market (Q5 onward). | Feathers×10, Straws×3 | 2 |
+| Silk Hat | Lemuria market materials stall (Q6 onward). | Silk×6, Leather×2 | 1 |
+| Knight's Helmet | Balora armor shop (Q12 onward). | Iron Bar×2, Leather×4 | 2 |
+| Alluring Hat | [Expanded Medal Shop](exploration.qmd#arena-shop), 200 medals after accepting the King’s request. | Mythril Bar×2, Cotton×10, Wool×10, Rope×5 | 3 |
+| Woolen Boots | Lemuria market materials stall (Q6 onward). | Wool×8, Leather×1 | 0 |
+| Silk Boots | Lemuria market materials stall (Q6 onward). | Silk×5, Leather×2, Cotton×1 | 1 |
+| Leather Boots | Balora armor shop (Q12 onward). | Leather×5, Cotton×2, Rope×2 | 1 |
+| Steadfast Boots | [Expanded Medal Shop](exploration.qmd#arena-shop), 200 medals after accepting the King’s request. | Iron Bar×5, Diamond Ore×5, Leather×10, Cotton×10 | 2 |
+
+Boots go in accessory slots. The four pairs listed here are for Drey and Garet.
+
+### Belts, bracelets and shields {#accessories-shields}
+
+| Equipment | Recipe location | Materials per item | Magic Core slots |
+| --- | --- | --- | --- |
+| Leather Belt | Lemuria market materials stall (Q6 onward). | Leather×3, Rope×2 | 1 |
+| Sturdy Belt | Balora armor shop (Q12 onward). | Leather×3, Rope×2 | 1 |
+| Ancient Belt | Merchant in the Snowbell Village house with the father and son, after the Q16 rescue. | Leather×10, Diamond Crystal×2, Mythril Crystal×2 | 0 |
+| Feathered Bracelet | Windmill Village Item Store or Lemuria market (Q5 onward). | Feathers×12, Straws×2, Vines×2 | 1 |
+| Iron Bracelet | Lemuria market materials stall (Q6 onward). | Iron Bar×1 | 1 |
+| Lucky Bracelet | Balora armor shop; also later in Artellus and Regull Port (Q12 onward). | Gold Bar×1, Clover Leaf×1 | 2 |
+| Protectors Bracelet | [Expanded Medal Shop](exploration.qmd#arena-shop), 200 medals after accepting the King’s request. | Diamond Crystal×1, Mythril Bar×2, Mythril Crystal×1 | 3 |
+| Wooden Shield | Dhalium armor shop or Windmill Village Item Store (Q3 onward). | Wood×3, Stone×3, Vines×3 | 1 |
+| Iron Shield | Balora armor shop (Q12 onward). | Wood×10, Iron Bar×1 | 1 |
+| Golden Shield | Balora armor shop (Q12 onward). | Iron Bar×1, Gold Bar×1 | 2 |
+| Ancient Buckler | Emerald Garden stump merchant or Snowbell Village merchant (Q14 onward). | Iron Bar×1, Gold Bar×1, Diamond Bar×1 | 3 |
+
+The Lucky Bracelet has two Magic Core slots. It also gives you 3 extra AP when you land a normal attack or use Guard. See [Clover Leaf](#clover-leaf) for where to find it. The Ancient Belt has no Magic Core slots, so weigh its stats and effect on MP costs before swapping it in.
+
+Only Drey can equip the Wooden Shield. Drey and Garet can use the Iron Shield and Golden Shield. All four can use the Ancient Buckler.
+
+## The four ultimate weapons {#ultimate}
+
+Once you have the recipe, use **Synthesize → Craft Weapon**. The recipe is reusable.
+
+| Weapon | Recipe | Ingredients |
+| --- | --- | --- |
+| [Alpha’s Bond](#alpha-bond) | Lost Ruins recipe pickup | Fire Gem ×5, Light Essence ×20, Mythril Crystal ×1, Adamantite ×1 |
+| [Omega’s Wish](#omegas-wish) | Defeat Garet in Union Link | Earth Gem ×5, Light Essence ×20, Mythril Crystal ×1, Adamantite ×1 |
+| [Loyal Link](#loyal-link) | 750 medals after accepting The King’s Request! | Wind Gem ×5, Red Halo ×10, Mythril Crystal ×1, Dark Matter ×1 |
+| [Wishing Star](#wishing-star) | First portal victory for The King’s Request! | Water Gem ×5, Red Halo ×10, Mythril Crystal ×1, Orichalcum ×1 |
+
+Making all four? Set aside **2,550 medals** for two pieces of Adamantite and the Loyal Link recipe. See the [medal budget](exploration.qmd#arena-medals). The [first portal victory](quests.qmd#portal-branch) gives two Mythril Crystals and five Mythril Bars; four of those bars make the other two crystals once you have the [refining recipes](#mythril-refining).
+
+### Alpha’s Bond {#alpha-bond}
+
+1. After the Q16 rescue, return to the ruins through the central door in the Lost City. Go through the hall’s north door and step on the switch at the north end of the chamber.
+2. Return to the city and enter the Lost Ruins through either northern building. Read the central stone tablet.
+3. Fight the four knights in order, from the leftmost room to the rightmost. Drey fights alone. See the [knight trial route](journey.qmd#arcius-knights).
+4. After the four wins, go through the north door and inspect the orb at the north end to pick up **Alpha’s Bond Recipe**.
+5. Accept [The King’s Request!](quests.qmd#the-kings-request) in Regull Port. Trade **900 medals** for one Adamantite and use the table above to finish the weapon.
+
+### Omega’s Wish {#omegas-wish}
+
+Accept [Union Link](quests.qmd#union-link) in Snowbell Village. Beat Garet in Elm Village for the recipe. You'll get the rings from the quest as well. Trade **900 medals** for one Adamantite and gather the remaining ingredients. You can unlock [Snowbell’s extra scene](memories.qmd#third-scene) without crafting the weapon.
+
+### Loyal Link {#loyal-link}
+
+Accept The King’s Request!, then spend **750 medals** on the recipe at the Arena Medal Shop. The [first portal win](quests.qmd#portal-branch) supplies a Mythril Crystal and **Dark Matter**. This recipe uses Dark Matter, not Dark Essence, and takes no Adamantite.
+
+### Wishing Star {#wishing-star}
+
+Finish the [first portal fight](quests.qmd#portal-branch) for the recipe, then fight Dark Behemoth for a piece of Orichalcum. **Legendary Orichalcum** also uses one for a Meteor Core. If you want both rewards, [return to the encounter](#behemoth-materials) for another.
+
+## Other equipment worth finding {#unique}
+
+- Go back to the [Dhalium storage room](journey.qmd#dhalium-rewards) for the Long Cape.
+- Get the [Bronze Jewel recipe](exploration.qmd#arena-passage) through the old door behind the arena.
+- The [later fight against Darkspore Drey](journey.qmd#later-drey) drops the **Corrupted Blade**. It absorbs Dark but drains HP while equipped.
+- See the rewards for [Crafting the Unknown](quests.qmd#crafting-the-unknown), [The Messenger](quests.qmd#messenger) and the [cursed equipment quests](quests.qmd#cursed).
+
+### Arena purchases: cores, gear and recipes {#arena-gear}
+
+Check the [Medal Shop list](exploration.qmd#arena-shop) for prices and which purchases still need crafting. Level 1 and Level 3 Protection Cores are ready to use. Put one in a matching slot and wear the gear for 200 or 450 starting BP.
+
+| Purchase | What you get |
+| --- | --- |
+| Silver Armor, Feathered Robe, Arena Robe | Finished armor with two, one and two Magic Core slots, respectively. |
+| Champion Belt, Faery Charm | Finished accessories without core slots. The belt favors HP and attack; the charm favors MP and magic attack. |
+| Alluring Hat, Steadfast Boots, Protectors Bracelet | Recipes after you accept The King’s Request! Their finished items have three, two and three Magic Core slots. The bracelet uses Mythril Bars and a Mythril Crystal. |
+
+## Materials and where to get them {#materials}
+
+| Material | Source and use |
+| --- | --- |
+| Mythril Crystal | [Refine two bars](#mythril-refining) or win a [moving portal fight](quests.qmd#portal-repeat) for two. |
+| Adamantite | After accepting The King’s Request!, pay 900 medals per piece at the [Medal Shop](exploration.qmd#arena-shop). |
+| Orichalcum | [Dark Behemoth](journey.qmd#dark-behemoth) drops one. Wishing Star and Legendary Orichalcum each consume one. |
+| Dark Matter | [Portal victories](quests.qmd#portal-repeat) award one per win. Loyal Link uses one. |
+| Red Halo | Lightspore Guards and Angels have a 50% drop chance per enemy. |
+| Elemental gems | Make one from two matching stones using the recipe set at the Balora magic shop. |
+| Light Essence | Snowbell Village’s merchant in the house with the father and son sells it for 60 Gold, starting with the rescue request. Alpha’s Bond and Omega’s Wish take twenty each. |
+
+Ten matching essences make one shard; two shards make one stone; two stones make one gem. Starting with essence alone, you'll need 40 for one gem. Pick up the recipe sets in order from the Forgotten Ruins, Lemuria Magic House and Balora magic shop.
+
+[]{#red-halo}
+
+For Red Halos, enter the snowy forest directly south of Snowbell Village. Fight the Lightspores, leave through the northeast exit to the world map, then re-enter for another encounter. Lightspore Angels can revive allies.
+
+### Refine Mythril Ore into bars and crystals {#mythril-refining}
+
+From the [Infested Cave entrance](journey.qmd#infested-boots), travel east into the middle area, then north into the deep area. The Mythril vein is halfway up the west side, north of the cursed boots encounter. Mine it for both refining recipes. Make a **Mythril Bar** from **4 Mythril Ore**, then make a **Mythril Crystal** from **2 Mythril Bars**. One crystal takes eight ore if you start from nothing.
+
+Diamond and Mythril veins give you 1–4 ore each. Once mined, they take 5–10 nights to refill. Paid nights at the Regull Port tavern count; saving, camping and Snowbell Village's free bed don't. If you're only a little short, buy Mythril Ore from the Snowbell merchant for 450 Gold apiece, or use the drops from another [portal fight](quests.qmd#portal-repeat).
+
+### Cloth, metal and intermediate ingredients {#ordinary-materials}
+
+The northeast materials stall in Lemuria market sells Cotton (60 Gold), Silk (100), Straw (40), Wool (110), Leather (140), Feather (60), Rope (70), Bronze Ore (50) and Iron Ore (100), as well as several armor recipes.
+
+| Ingredient | How to make it | Where to get the recipe |
+| --- | --- | --- |
+| Wooden Hilt | Wood ×2 | The same forest pickup as Wooden Sword Recipe. |
+| Bronze Hilt or Iron Hilt | Matching ore ×5 | With the Bronze Sword recipe on Fara Mountain or the Iron Sword recipe in the Lemuria slums. |
+| Rope | Vine ×3 | Dhalium armor shop or Lemuria market; the market also sells finished Rope. |
+| Bronze, Iron and Gold Bars | Matching ore ×10 | Bronze veins in Fara Cave; iron in the thieves’ hideout or sewers; gold in the Abandoned Mine or middle Infested Cave. |
+| Diamond Bar and Diamond Crystal | Four ore per bar; two bars per crystal | Mine Diamond Ore in the deep Infested Cave to get both recipes. |
+| Mythril Bar and Mythril Crystal | Four ore per bar; two bars per crystal | [Deep Infested Cave Mythril vein](#mythril-refining). |
+
+### Snowbell Village merchant {#snowbell-materials}
+
+After you accept the [rescue request](journey.qmd#snowbell-father), visit the father's house just west of the empty house.
+
+| Material | Price per item |
+|---|---:|
+| Fire, Water, Earth or Wind Essence | 30 Gold |
+| Dark or Light Essence | 60 Gold |
+| Bronze Ore | 30 Gold |
+| Iron Ore | 60 Gold |
+| Gold Ore | 80 Gold |
+| Diamond Ore | 200 Gold |
+| Mythril Ore | 450 Gold |
+
+[Medicines and camping supplies](#supplies)
+
+### Enemy drops and Clover Leaf {#clover-leaf}
+
+The Lucky Bracelet uses one **Clover Leaf**. Traplant and the Pilly in Green Valley each have a 10% chance to drop one. Trapperlant in the overworld grasslands between Balora and Artellus has a 20% chance.
+
+Save Monster Stone for the Iron Jewel (20) or Bronze Jewel (10). For Monster Claws, use Roc Bird Claws and Minotaur Horns, not the claws and horns from Behemoths.
+
+### Eltio Salve {#eltio-salve}
+
+The [opening scene with the dog](journey.qmd#wounded-dog) introduces the recipe. Use **Synthesize → Craft Item** with two Eltio Leaves to make one **Eltio Salve**. It heals one ally for 100 HP. The item stall in Lemuria market also sells finished salve for 60 Gold. The separate **Ointment** cures paralysis.
+
+### Behemoth materials and a second Orichalcum {#behemoth-materials}
+
+An ordinary Behemoth has an **80% chance to drop a Claw and a separate 80% chance to drop a Horn**. The captain checks for the Claw without taking it. Need three Claws and three Horns for Beastly Claws? **Dark Behemoth** in the deep [Infested Cave](journey.qmd#dark-behemoth) always drops one of each, plus one Orichalcum. To fight it again, take the south exit to the middle area, then head back north. Changing areas won't restore your party or refill the local ore veins.
+
+For **Beastly Claws and Crafting the Unknown**, set aside three claws and four horns. For **Wishing Star and Legendary Orichalcum**, set aside two Orichalcum. Starting with none, four Dark Behemoth wins cover these drops, leaving one spare claw and two spare Orichalcum. If you only need to sail, take one ordinary claw back to the captain.
+
+## Soulstones and cores {#equipment-cores}
+
+### Soulstones and Special Guard {#soulstones}
+
+The story upgrades Soulstones for you. You don't install them like cores, and they're different from the Memory Stone used to replay scenes. Look for **Sp.Guard** in battle after an upgrade. It sets up that character's effect for the following turn, and using the follow-up may cost AP.
+
+The four starting Soulstones give +1 Guard AP. These story upgrades raise that to +2 and change Guard to Sp.Guard.
+
+| Character and Soulstone | Where it changes | What Sp.Guard sets up for the next turn |
+| --- | --- | --- |
+| Drey: Adventurer Soulstone | [The morning after the Q5 camp](journey.qmd#road-to-kingdom) | Stronger battle Synth. |
+| Garet: Unbinding Soulstone | [After the Q4 thieves’ hideout](journey.qmd#gerard) | Grand Slam! for 75 AP. |
+| Lex: Guardian Soulstone | [Return to the captain’s residence after the Q6 rescue](journey.qmd#lemuria) | Sonic Strike for 75 AP. Look for that name in the Ability list. |
+| Su: Growing Soulstone | [Rescue the red Slib and pick up the key](quests.qmd#slibs-start) | Cast a spell twice and boost elemental damage. The second cast still uses MP. |
+
+### Install a core {#core-install}
+
+1. Make or buy the core itself. You can't install a recipe. **Equip Core** unlocks at the [Forgotten Ruins orb](journey.qmd#ruins-rest).
+2. Open **Equip Core** from the menu, choose the equipment and place the core in a matching slot.
+3. Equip the item on the character who needs the skill. In battle look under **Ability** or **Magic**, and check AP or MP.
+4. Use **Detach Augment** to recover the core before moving it to another item. Taking off an item removes the abilities its cores grant.
+
+### Healing and elemental cores {#common-cores}
+
+| Core | Where to find it | Ingredients or cost | What it grants |
+| --- | --- | --- | --- |
+| Healing Core | [Beginner Core Recipes](journey.qmd#ruins-rest) or the upper-district Magic House in Lemuria | Water Shard ×1 or 350 Gold | Healing, 20 MP |
+| Wind Core | Same recipe set or shop | Wind Shard ×1 or 250 Gold | Wind attack, 10 MP |
+| Chill Core | Apprentice Core Recipes, orb east of the Magic House | Water Stone ×1 | Single-target Water attack, 10 MP |
+| Torrent Core | Apprentice Core Recipes | Wind Core ×1, Wind Stone ×1 | Wind attacks, 10 or 30 MP |
+| Mending Core | [Return to the blue Slib for the reward](quests.qmd#slibs-friends) | Healing Core ×1, Water Gem ×1 | Healing, 20 MP; revival, 100 MP |
+| Holy Core | [Emerald Garden stump merchant](journey.qmd#emerald-detours) | 2,500 Gold | Single-target Light attack, 80 MP |
+
+### Protection Cores and barriers {#barrier-cores}
+
+Level 1, 2 and 3 Protection Cores grant **200, 350 and 450 BP**. The Medal Shop stocks Level 1 and 3, and the merchant inside the Emerald Garden stump sells Level 2 for 10,000 Gold. Two copies of the same level do not stack on one character; different levels add together. All three give 1,000 BP. Gear restores its base barrier at the start of each fight.
+
+**Su Barrier** costs **100 AP** and gives **one ally 300 BP plus Su’s current magic attack**. BP absorbs damage without raising max HP.
+
+### The four realm cores {#realm-cores}
+
+Win a recipe in one of the [four realms](exploration.qmd#realms), make the core, then put it in a **Magic Core** slot.
+
+| Core | Realm | Ingredients | Spell and resistance |
+| --- | --- | --- | --- |
+| Gale Core | [Wind](exploration.qmd#wind-reward) | Wind Stone ×2, Wind Crystal ×5 | Air Blast, single-target Wind, 50 MP; Wind resistance. |
+| Bubble Core | [Water](exploration.qmd#water-reward) | Water Stone ×2, Water Crystal ×5 | Bubble Blast, single-target Water, 35 MP; Water resistance. |
+| Shield Core | [Earth](exploration.qmd#earth-reward) | Earth Gem ×1, Rock Crystal ×5 | Rock Shield, protects one ally, 80 MP; Earth resistance. |
+| Comet Core | [Fire](exploration.qmd#fire-reward) | Fire Gem ×2 | Comet, group Fire, 100 MP; Fire resistance. |
+
+Look for Wind, Water and Rock Crystals on creatures of the matching element. Mythril Crystals are a different material. Make stones and gems using the [elemental recipe chain](#materials). The Meteor Core from Legendary Orichalcum is separate from Comet Core.
+
+## Crafting and cooking {#crafting}
+
+### Where to cook {#cooking-menu}
+
+Use **Synthesize** for gear. To make food, take the recipe and ingredients to a kitchen or campsite where you can choose **Cook**. Each batch makes one serving, and you keep the recipe. Eat on the map before a fight, but save any servings you need for quests.
+
+Try the new home's ground-floor kitchen, the cooking spot in the Forgotten Ruins, or the [Dhalium kitchen](journey.qmd#dhalium-rewards) after rescuing Earl. If a dish is missing from the list, check that you have its recipe. If it's greyed out, check your ingredients. Cooking doesn't cost Gold.
+
+Bread needs **Clean Water ×1 and Flour ×1**. Meat Sandwich takes one each of Bread, Grilled Meat, Monster Meat and Eltio Leaf. See the [home cooking route](journey.qmd#home-cooking) to make the five Bread and one Fried Meat the households need.
+
+### Choose food for the fight ahead {#food-use}
+
+| Food | Immediate effect | Ongoing effect | Recipe |
+| --- | --- | --- | --- |
+| Grilled Meat | 10% HP, 20 AP | Max HP +10%, walking duration | Forgotten Ruins cooking tutorial |
+| Piko Juice | 10 AP | Attack +15%, five turns or until battle ends | Forgotten Ruins cooking tutorial |
+| Bread | 20 HP, 2 AP | None | Dhalium Item Store or Lemuria market recipe vendor |
+| Meat Sandwich | 5 AP | Defense +5%, 5 AP per turn, walking duration | [The Perfect Recipe 1](quests.qmd#perfect-recipe-1) |
+| Wild Farm Stew | 5% HP and MP, 30 AP | Eight base stats +5%, walking duration | [The Perfect Recipe 2](quests.qmd#perfect-recipe-2) |
+| Fried Meat | 30% HP, 35 AP | Max HP +30%, walking duration | Lemuria market recipe vendor |
+| Exotic Stew | 40 AP | 10% MP per turn, walking duration | [The Perfect Recipe 3](quests.qmd#perfect-recipe-3) |
+| Smokey Skewer | 25 AP | Magic attack and defense +15%, five turns or until battle ends | Lemuria market recipe vendor |
+| Mixed Root Stew | 15% HP and MP, 35 AP | Max HP and MP +15%, walking duration | [The Perfect Recipe 4](quests.qmd#perfect-recipe-4) |
+| Meat Cutlet Sandwich | 40 AP | Agility +20%, walking duration | Lemuria market recipe vendor |
+| Sweet Egg Rolls | 25 AP | Attack +20%, critical rate +20 percentage points, five actions or until battle ends | Lemuria market recipe vendor |
+| Berryful Cake | 30 AP | 10% HP per turn, walking duration | [The Perfect Recipe 5](quests.qmd#perfect-recipe-5) |
+| Octo Stew | 25 AP | 5% HP, 5% MP and 5 AP per turn, walking duration | Paradise Isle tavern |
+| Octo Dumplings | 100 AP | None | [The Perfect Recipe 6](quests.qmd#perfect-recipe-6) |
+| Lamphian Stew | 50% HP and MP and full AP | None | Snowbell Village merchant in the house with the father and son; 1,000 Gold |
+
+**Grilled Meat gives 20 AP**, even if its description says 15. Octo Stew and Meat Sandwich restore 5 AP each turn, not a percentage. Healing and resource recovery stop at the character’s cap.
+
+
+Food buffs marked with a walking duration last **500 steps**, even if you fight along the way. Eating the same meal again doesn't stack its buff. Rest **before** eating: a full-party heal or Arena entry clears the buff. You keep any AP you already gained from the meal.
+
+## Healing, rest and supplies {#supplies}
+
+Save crystals don't heal your party. If you need HP or MP, or want to clear status effects, rest at an inn, campfire or Snowbell's free bed. You keep your AP.
+
+After accepting Snowbell’s rescue request, go to the north side of the empty house and talk to Garet at the rest spot. Choose to rest there. It doesn't cost Gold or a Camping Kit.
+
+### Before sailing from Regull Port {#port-supplies}
+
+Rest at the Regull Port tavern for **400 Gold**. At a campfire, resting consumes one **Camping Kit**; use **Synthesize → Craft Item** with Stone ×6, Wood ×6, Fire Essence ×2 and Water Essence ×2 to make one after getting the [Camping Kit Recipe](journey.qmd#ruins-rest). Lemuria market also sells a finished kit for **500 Gold**. In Regull Port, check the outdoor stall in the southeast for medicines before boarding. High Mana Potion is 450 Gold there and Purified Water is 55 Gold.
+
+| Item | Effect | Gold each |
+| --- | --- | ---: |
+| Mild Potion | Restores 500 HP | 155 |
+| High Potion | Restores 1,000 HP | 260 |
+| Mana Water | Restores 100 MP | 100 |
+| Mild Mana Potion | Restores 250 MP | 350 |
+| High Mana Potion | Restores 500 MP | 450 |
+| Spirit Water | Revives one ally at 30% HP | 250 |
+| Revival Water | Revives one ally at 50% HP | 550 |
+| Eyedrops | Cures Blind | 100 |
+| Remedy | Cures poison, blind, silence, confusion, paralysis and sleep | 350 |
+
+Four Mild Potions, two High Mana Potions, two Spirit Waters and four Eyedrops cost 2,420 Gold here. Check your inventory and adjust. The merchant in Snowbell Village stocks supplies after you accept the rescue request: Mana Water (77 Gold), High Mana Potion (550), Spirit Water (114), Revival Water (234), and Remedy (450). Use the port prices above when preparing for the first voyage.
+
+### Where to regroup {#supply-checkpoints}
+
+| Encounter | Before you go in |
+| --- | --- |
+| Q12: approaching the stone arch | Rest with a Camping Kit in the last mine area. After the two mechanical guards, keep Garet, Lex and Su alive until the fight ends on turn eight. HP, MP, AP and supplies carry over, and Drey's combos aren't available for this part. |
+| Q14: the Eye trial | Rest at the western camp before eating. Avoid casting an element that is currently reflected. |
+| Q15: cave and voyage | Get a Behemoth Claw for the main quest. Rest and buy supplies in Regull Port before confirming departure. |
+| Q16: knight trials and Union Link | Drey fights alone. You can leave the knight trials between rooms. Beta and Delta can inflict silence, so keep a Remedy if you heal with magic. |
+| The King’s Request! | The Arena restores HP and MP and removes food buffs; losing still costs the entry fee and anything you used. The portal won't heal you on entry, and you can't flee. Save and stock up first. |
+| Q17: final battle | Use the campfire on the left of the last corridor or save at the crystal on the right. HP, MP, AP, inventory and the first battle’s loot carry into the second fight. Leveling after the first fight does not refill resources. |
+
+## AP, SP and battle basics {#battle-basics}
+
+### Turn order and Guard {#turn-order}
+
+Check the turn order before deciding who will heal. If your usual healer acts too late, a faster ally can use an item. **Guard** reduces damage while it's active and gives you AP based on your gear. **Sp.Guard** also sets up that character's special effect for the next turn.
+
+### AP and combo attacks {#ap}
+
+Each character has a separate AP pool, capped at **95 + level × 5**. Normal attacks and Guard build AP, which carries between fights. Each pair-up combo needs **100 AP from both participants**. Su’s **Elemental Shift** costs **25 AP** and chooses the next form at random. Leveling raises the AP cap but doesn't fill it. You gain AP when an attack hits. A knockout or a win doesn't award any extra AP on its own.
+
+### Synth in battle {#battle-synth}
+
+Choose **Synth**, pick the first ingredient, then pick one of the available matches. You'll use up both.
+
+- **High Potion + Purified Water** restores 60% of max HP to each living party member. Purified Water heals 50 HP alone and is separate from the water used in Bread. In Snowbell, the ingredients cost 345 and 10 Gold.
+- **High Mana Potion + High Mana Potion** restore 50% of max MP to each living party member. One potion used directly restores 500 MP to one character.
+
+### Spend SP {#sp}
+
+Open **Stat Points → Allocate**. Your base SP is your level minus one. Each character and class has its own balance, so check yours after a class change. There's no regular **Revert** option. Double-check where you've put your SP before confirming.
+
+| Purchase | Gain | SP cost |
+| --- | --- | --- |
+| Max HP | +10 | First ten cost 1 each; next ten cost 2 each; add one per ten after that. |
+| Max MP | +5 | Same progression, counted separately. |
+| Attack, Defense, Magic Attack, Magic Defense, Agility, Luck | +1 | 1 each. |
+
+### If a skill is missing {#skill-sources}
+
+Check how far you are in the story, which Soulstone the character has and what cores are on their equipped gear. The right gear can grant a spell; leveling up alone won't unlock a skill tree. Check that you have enough AP or MP to use the skill.
+
+If a boss has an elemental protection icon and a barrier, use attacks it isn't protected against to bring BP down to zero. The party's passive removes the protection at the end of an action once the barrier is gone. Wait for the icon to disappear before switching back. If the enemy absorbs that element, it can still heal from it.
+
+### Synth Soul Breaker {#soul-breaker}
+
+Finish the [third Snowbell scene and its follow-up](memories.qmd#third-scene-reward) to learn **Synth Soul Breaker**. In normal fights, prepare **300 AP per party member**, keep all four able to act and follow the directional inputs. Replaying Memory 3 does not teach it again. The scripted finish of the final fight has its own trigger and costs no AP or MP.
+
+[Main walkthrough](journey.qmd) · [Realms and arena](exploration.qmd)

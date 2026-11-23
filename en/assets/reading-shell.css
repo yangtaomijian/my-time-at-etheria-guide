@@ -1,0 +1,64 @@
+/* Only bridges for this preview's native Quarto title/search, not new design tokens. */
+#quarto-search { display: none; }
+#kt-search-launcher { display: inline-flex; align-items: center; }
+#quarto-header .navbar-brand-container:empty { display: none; }
+@media (min-width: 992px) {
+  body #quarto-content.etheria-no-toc.page-columns { display: block; }
+  body #quarto-content.etheria-no-toc.page-columns > main.content {
+    margin-inline: auto;
+    padding: 1.5rem 0 0;
+  }
+  /* Compact desktop navigation, matching the existing PW/DW type scale. */
+  #quarto-header .navbar-nav.me-auto > .nav-item > .nav-link {
+    font-size: .93rem;
+    font-weight: 540;
+  }
+  #quarto-header .navbar-nav.ms-auto .nav-link { font-size: .8rem; }
+}
+/* Native search keeps its own keyboard handling; use the shared panel surfaces. */
+.aa-DetachedContainer, .aa-DetachedFormContainer, .aa-Panel {
+  background: var(--kt-surface) !important; color: var(--kt-text);
+  border-color: var(--kt-border-strong); border-radius: var(--kt-radius-md);
+}
+.aa-DetachedOverlay { background: rgb(41 39 32 / 42%); }
+body .aa-DetachedContainer {
+  --etheria-search-top: clamp(3.5rem, 10dvh, 7rem);
+  top: var(--etheria-search-top); right: 0; bottom: auto; left: 0;
+  width: min(52rem, calc(100vw - 2.5rem)); max-width: 52rem;
+  max-height: calc(100dvh - var(--etheria-search-top) - 1rem);
+  margin: 0 auto; padding: 0; overflow: hidden;
+  border: 1px solid var(--kt-border-strong); border-radius: var(--kt-radius-md);
+  box-shadow: var(--kt-shadow-float); font-family: var(--kt-font-sans); font-size: 1rem;
+}
+body .aa-DetachedFormContainer {
+  display: flex; align-items: center; gap: .5rem; padding: .75rem;
+  border-bottom: 1px solid var(--kt-border); border-radius: 0;
+}
+.aa-DetachedFormContainer .aa-Form {
+  color: var(--kt-text); background: var(--kt-bg); border-color: var(--kt-border-strong);
+  border-radius: var(--kt-control-radius); min-height: 44px; margin: 0;
+}
+.aa-DetachedFormContainer .aa-Input { color: var(--kt-text); }
+body .aa-DetachedCancelButton {
+  flex: none; min-width: 3rem; min-height: 44px; margin: 0; padding: .4rem;
+  border: 1px solid transparent; border-radius: var(--kt-control-radius);
+  color: var(--kt-text-muted); background: transparent; font: inherit; font-size: .85rem;
+  white-space: nowrap;
+}
+body .aa-Panel { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+body .aa-PanelLayout { max-height: min(65vh, calc(100dvh - var(--etheria-search-top) - 6rem)); padding: .3rem .75rem .75rem; }
+body .aa-Item .search-item { padding: .7rem .4rem; border-bottom: 1px solid var(--kt-border); color: var(--kt-text); }
+body .aa-Item .search-result-title { color: var(--kt-heading) !important; font-weight: 650; }
+body .aa-Item .search-result-icon { color: var(--kt-text-muted) !important; }
+body .aa-Item :is(.search-result-section, .search-result-text) { color: var(--kt-text-muted) !important; }
+body .aa-Item[aria-selected=true] :is(.search-item, .search-result-title-container, .search-result-text-container, .search-result-section, .search-result-text) {
+  background: var(--kt-accent-soft) !important;
+}
+body .aa-Item .search-match { color: var(--kt-heading); background: var(--kt-target-bg); }
+body .aa-DetachedCancelButton:focus-visible, body .aa-Item a:focus-visible { outline: 2px solid var(--kt-focus); outline-offset: -2px; }
+@media (max-width: 991px) {
+  body .aa-DetachedContainer { --etheria-search-top: max(12px, env(safe-area-inset-top)); width: calc(100vw - 1.5rem); }
+}
+/* Normal prose tables opt into the existing measured record layout on phones. */
+#quarto-document-content .etheria-table { min-width: 0; max-width: 100%; }
+#quarto-document-content .etheria-table .kt-record-label { color: var(--kt-text-muted); }

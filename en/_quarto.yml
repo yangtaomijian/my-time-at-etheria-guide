@@ -1,0 +1,71 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - journey.qmd
+    - quests.qmd
+    - exploration.qmd
+    - equipment.qmd
+    - memories.qmd
+  resources:
+    - assets/**
+  post-render:
+    - python3 tools/apply-reading-shell.py
+    - python3 tools/add-search-aliases.py
+
+website:
+  title: My Time at Etheria Guide
+  search:
+    location: navbar
+    type: overlay
+    show-item-context: false
+  navbar:
+    title: false
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Walkthrough
+        href: journey.qmd
+      - text: Side Quests
+        href: quests.qmd
+      - text: Realms & Arena
+        href: exploration.qmd
+      - text: Equipment
+        href: equipment.qmd
+      - text: Memories
+        href: memories.qmd
+  page-footer:
+    left: |
+      <div class="kt-publication-footer"><p>Unofficial player guide · My Time at Etheria</p><div class="kt-publication-footer-links"><span class="kt-publication-attribution">Maintained by <a class="kt-carambi-link" href="https://carambi.com/">Carambi</a></span><button class="kt-back-to-top" type="button">↑ Back to top</button></div></div>
+lang: en
+language:
+  search-text-placeholder: Search the guide
+format:
+  html:
+    theme:
+      light: [default, assets/theme.scss]
+      dark: [default, assets/theme.scss, assets/shared/kt-dark.scss]
+    css:
+      - assets/shared/kt-foundation.css
+      - assets/shared/kt-publication.css
+      - assets/shared/kt-layout.css
+      - assets/shared/kt-components.css
+      - assets/shared/kt-theme.css
+      - assets/shared/kt-production-shell.css
+      - assets/shared/kt-mobile-header.css
+      - assets/reading-shell.css
+      - assets/architecture.css
+    toc: true
+    toc-title: On this page
+    toc-depth: 3
+    grid:
+      sidebar-width: 190px
+      body-width: 940px
+      margin-width: 165px
+      gutter-width: 22px
+    smooth-scroll: false
+    respect-user-color-scheme: true
+    include-after-body:
+      - assets/appearance.html
+      - assets/shared/kt-production-shell.html
