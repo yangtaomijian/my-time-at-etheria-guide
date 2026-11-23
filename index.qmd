@@ -102,4 +102,6 @@ page-layout: full
 [两条晚期任务](quests.qmd#late) · [竞技场商店](exploration.qmd#arena) · [重要材料](equipment.qmd#materials) · [剧情条件](memories.qmd#third-scene)
 :::
 
-刚开始玩，可以先看[任务日志与实际进度](journey.qmd#basics)；已经安装任务指引插件时，可查看[N开导航、H选择目标等用法](journey.qmd#quest-assist)。
+刚开始玩，可以先看[任务日志与实际进度](journey.qmd#basics)。
+
+[下载 Quest Assist（全汉化版专用 Beta 3）](https://github.com/yangtaomijian/my-time-at-etheria-guide/releases/download/quest-assist-beta/Etheria-Quest-Assist-GM-ZH-Beta-3.zip) · [快捷键与用法](journey.qmd#quest-assist)

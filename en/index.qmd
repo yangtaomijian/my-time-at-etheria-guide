@@ -96,4 +96,6 @@ Union Link leads to the Omega's Wish recipe and the extra scene. The King's Requ
 [Two late side quests](quests.qmd#late) · [Arena shop](exploration.qmd#arena-shop) · [Crafting materials](equipment.qmd#materials) · [Scene requirements](memories.qmd#third-scene)
 :::
 
-New to the game? Start with [the quest journal](journey.qmd#basics). If you have Quest Assist installed, see [how to use H, N, and Tab](journey.qmd#quest-assist).
+New to the game? Start with [the quest journal](journey.qmd#basics).
+
+[Download Quest Assist (Official FINAL, English Beta 2)](https://github.com/yangtaomijian/my-time-at-etheria-guide/releases/download/quest-assist-beta/Etheria-Quest-Assist-Official-FINAL-English-Beta-2.zip) · [Shortcuts and tips](journey.qmd#quest-assist)
