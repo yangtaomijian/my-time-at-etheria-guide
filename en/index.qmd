@@ -1,6 +1,6 @@
 ---
 title: My Time at Etheria
-pagetitle: "My Time at Etheria Walkthrough (Official FINAL)"
+pagetitle: "My Time at Etheria Walkthrough for the Official FINAL Release"
 subtitle: Official FINAL walkthrough
 description: "My Time at Etheria walkthrough for Official FINAL, with main quests Q1–17, puzzles, side quests, arena, crafting, and how to unlock all three memories."
 toc: false
