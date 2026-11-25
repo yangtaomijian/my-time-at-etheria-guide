@@ -23,7 +23,7 @@ page-layout: full
 <a class="section-entry" href="quests.html"><span class="section-num">02</span><span><span class="section-label">支线任务</span><span class="section-description">对应主线阶段，看现在能接什么、顺路做什么、何时回来交付。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
 <a class="section-entry" href="exploration.html"><span class="section-num">03</span><span><span class="section-label">探索与竞技场</span><span class="section-description">四处遗忘秘境、远古之灵、竞技场报名与奖牌商店。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
 <a class="section-entry" href="equipment.html"><span class="section-num">04</span><span><span class="section-label">装备与合成</span><span class="section-description">常规与终极武器、防具饰品、升级材料、灵魂石、核心与食物。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
-<a class="section-entry" href="memories.html"><span class="section-num">05</span><span><span class="section-label">剧情与回忆</span><span class="section-description">雪铃村的第三段剧情、三个回忆条目，以及通关后继续。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="memories.html"><span class="section-num">05</span><span><span class="section-label">剧情与回忆</span><span class="section-description">雪铃村的第三段剧情、三个回忆条目，以及通关后继续。含后期剧情与解锁条件。</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
 </nav>
 ```
 
@@ -105,3 +105,5 @@ page-layout: full
 刚开始玩，可以先看[任务日志与实际进度](journey.qmd#basics)。
 
 [下载 Quest Assist（全汉化版专用 Beta 3）](https://github.com/yangtaomijian/my-time-at-etheria-guide/releases/download/quest-assist-beta/Etheria-Quest-Assist-GM-ZH-Beta-3.zip) · [快捷键与用法](journey.qmd#quest-assist)
+
+原作：Bara-Diction · [游戏原页（itch.io）](https://bara-diction.itch.io/my-time-at-etheria) · [作者的 X](https://x.com/BaraDiction)

@@ -17,7 +17,7 @@ Stuck? Find the next step by quest, location, or puzzle. The guide covers **Offi
 <a class="section-entry" href="quests.html"><span class="section-num">02</span><span><span class="section-label">Side Quests</span><span class="section-description">See what you can pick up now and when to come back for the reward.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
 <a class="section-entry" href="exploration.html"><span class="section-num">03</span><span><span class="section-label">Realms &amp; Arena</span><span class="section-description">Four forgotten realms, Ancient Spirits, arena entry, and the medal shop.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
 <a class="section-entry" href="equipment.html"><span class="section-num">04</span><span><span class="section-label">Equipment &amp; Crafting</span><span class="section-description">Weapons, armor, materials, Soulstones, cores, and food.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
-<a class="section-entry" href="memories.html"><span class="section-num">05</span><span><span class="section-label">Story &amp; Memories</span><span class="section-description">Snowbell's third scene, all three memories, and what to do after the ending.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
+<a class="section-entry" href="memories.html"><span class="section-num">05</span><span><span class="section-label">Story &amp; Memories</span><span class="section-description">Snowbell's third scene, all three memories, and what to do after the ending. Contains late-game spoilers and unlock requirements.</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>
 </nav>
 ```
 
@@ -99,3 +99,5 @@ Union Link leads to the Omega's Wish recipe and the extra scene. The King's Requ
 New to the game? Start with [the quest journal](journey.qmd#basics).
 
 [Download Quest Assist (Official FINAL, English Beta 2)](https://github.com/yangtaomijian/my-time-at-etheria-guide/releases/download/quest-assist-beta/Etheria-Quest-Assist-Official-FINAL-English-Beta-2.zip) · [Shortcuts and tips](journey.qmd#quest-assist)
+
+Game by Bara-Diction · [Official game page on itch.io](https://bara-diction.itch.io/my-time-at-etheria) · [Bara-Diction on X](https://x.com/BaraDiction)

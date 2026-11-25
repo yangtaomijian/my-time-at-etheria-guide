@@ -35,12 +35,13 @@ for language, root in [('zh-Hans', Path('public')), ('en', Path('public/en'))]:
     chinese = language == 'zh-Hans'
     title, back, about = ('全站讨论', '攻略首页', '查看各攻略页的最新讨论。') if chinese else (
         'Guide discussions', 'Guide home', 'Recent discussions across the guide.')
-    entry = '查看全站讨论' if chinese else title
+    entry = '查看全站讨论' if chinese else 'View all discussions'
+    invitation = '攻略有误或想补充，欢迎留言。' if chinese else 'Found a mistake or have something to add? Leave a comment.'
     homepage = root / 'index.html'
     home = homepage.read_text()
     assert home.count('</main>') == home.count('</body>') == 1
     hub_boot = '<script src="./assets/discussion/transport.js"></script>\n<script src="./assets/discussion/hub.js"></script>\n'
-    homepage.write_text(home.replace('</head>', config + '</head>').replace('</main>', f'<p data-etheria-hub-link hidden><a href="./discussions.html">{entry}</a></p>\n</main>')
+    homepage.write_text(home.replace('</head>', config + '</head>').replace('</main>', f'<p data-etheria-hub-link hidden><a href="./discussions.html">{entry}</a> · {invitation}</p>\n</main>')
                             .replace('</body>', hub_boot + '</body>'))
     # Use the same full reading shell as the home page, without its article or SEO
     # metadata. Keeping it outside Quarto's render set excludes the hub from search.
